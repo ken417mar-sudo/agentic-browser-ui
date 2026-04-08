@@ -35,7 +35,7 @@ export function Tab({
           'flex flex-1 h-full items-center gap-[8px] pl-[8px] pr-[4px] rounded-[8px] relative',
           selected
             ? 'bg-[var(--color-surface-base)] border-[0.5px] border-[rgba(31,98,238,0.2)] border-solid'
-            : '',
+            : 'border-[0.5px] border-transparent border-solid',
         ].join(' ')}
       >
         <div className="flex flex-1 gap-[8px] items-center min-w-0">
