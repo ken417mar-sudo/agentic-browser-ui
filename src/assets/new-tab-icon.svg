@@ -1,0 +1,14 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon">
+<g clip-path="url(#clip0_0_13)">
+<rect width="16" height="16" rx="8" fill="var(--fill-0, #009BFF)"/>
+<rect id="&#228;&#184;&#137;&#230;&#150;&#185;&#229;&#155;&#190;&#230;&#160;&#135;&#229;&#176;&#186;&#229;&#175;&#184;-82" width="16" height="16" fill="var(--fill-0, #1F62EE)"/>
+<path id="Subtract" d="M7.4873 4.16903C7.7948 3.95171 8.2052 3.95171 8.5127 4.16903L11.624 6.36727C11.8597 6.53386 12 6.8052 12 7.09383V11.1114C11.9998 11.6021 11.6021 12 11.1113 12.0001H8.40039V8.50008H7.59961V12.0001H4.88867C4.39795 12 4.00016 11.6021 4 11.1114V7.09383C4 6.8052 4.14028 6.53386 4.37598 6.36727L7.4873 4.16903Z" fill="var(--fill-0, white)"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_13">
+<rect width="16" height="16" rx="8" fill="white"/>
+</clipPath>
+</defs>
+</svg>

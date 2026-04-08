@@ -1,9 +1,8 @@
 import { ReactNode } from 'react'
 import appIcon from '../assets/app-icon.png'
+import newTabIcon from '../assets/new-tab-icon.svg'
 
 type TabType = '页签' | '新页签'
-type TabState = '选中' | '未选中'
-type TabInteraction = '默认' | '悬停'
 
 interface TabProps {
   type?: TabType
@@ -18,14 +17,16 @@ export function Tab({
   type = '页签',
   selected = false,
   hovered = false,
-  label = 'Prime Video',
+  label,
   icon,
   onClose,
 }: TabProps) {
+  const defaultLabel = type === '新页签' ? 'Home' : 'Prime Video'
+
   return (
     <div className="flex h-[40px] items-center w-[192px] p-[4px] relative">
-      {/* hover overlay */}
-      {hovered && !selected && (
+      {/* hover overlay — applies to both selected and unselected */}
+      {hovered && (
         <div className="absolute inset-[4px] rounded-[8px] bg-[var(--color-state-hover-overlay)] pointer-events-none" />
       )}
 
@@ -37,23 +38,28 @@ export function Tab({
             : '',
         ].join(' ')}
       >
-        {/* tab info */}
         <div className="flex flex-1 gap-[8px] items-center min-w-0">
-          {/* app icon */}
-          <div className="bg-[#009bff] overflow-clip rounded-[8px] shrink-0 size-[16px] relative">
-            {icon ?? <img src={appIcon} alt="" className="absolute inset-0 size-full object-cover pointer-events-none" />}
-          </div>
+          {/* icon: 新页签 uses plain icon, 页签 uses app icon with colored bg */}
+          {type === '新页签' ? (
+            <div className="shrink-0 size-[16px] relative">
+              {icon ?? <img src={newTabIcon} alt="" className="size-full" />}
+            </div>
+          ) : (
+            <div className="bg-[#009bff] overflow-clip rounded-[8px] shrink-0 size-[16px] relative">
+              {icon ?? <img src={appIcon} alt="" className="absolute inset-0 size-full object-cover pointer-events-none" />}
+            </div>
+          )}
 
           {/* label */}
           <p
             className="flex-1 min-w-0 truncate text-[12px] leading-normal text-[var(--color-text-primary)]"
             style={{ fontFamily: "'HYQiHei:60S', sans-serif" }}
           >
-            {label}
+            {label ?? defaultLabel}
           </p>
         </div>
 
-        {/* divider (unselected only) or close button (selected) */}
+        {/* right side: close button (selected) or divider (unselected) */}
         {selected ? (
           onClose && (
             <button
