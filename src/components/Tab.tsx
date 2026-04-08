@@ -61,16 +61,18 @@ export function Tab({
 
         {/* right side: close button (selected) or divider (unselected) */}
         {selected ? (
-          onClose && (
+          selected && hovered && onClose ? (
             <button
               onClick={onClose}
-              className="shrink-0 size-[16px] flex items-center justify-center rounded-[4px] hover:bg-[var(--color-state-hover-overlay)]"
+              className="shrink-0 size-[16px] flex items-center justify-center rounded-[4px]"
               aria-label="关闭标签"
             >
               <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
                 <path d="M1 1l6 6M7 1L1 7" stroke="var(--color-text-primary)" strokeWidth="1.5" strokeLinecap="round" />
               </svg>
             </button>
+          ) : (
+            <div className="shrink-0 size-[16px]" />
           )
         ) : (
           <div className="bg-[var(--color-text-disabled)] h-[10px] w-px shrink-0" />
