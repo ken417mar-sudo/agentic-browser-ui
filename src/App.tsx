@@ -32,7 +32,7 @@ export default function App() {
               selected={activeTab === tab.id}
               hovered={hoveredTab === tab.id}
               label={tab.label}
-              onClose={activeTab === tab.id ? () => {} : undefined}
+              onClose={() => {}}
             />
           </div>
         ))}
@@ -54,7 +54,7 @@ export default function App() {
         </div>
         <div>
           <p className="text-[10px] text-[var(--color-text-tertiary)] mb-1">类型=页签 选中=未选中 交互=悬停</p>
-          <Tab type="页签" selected={false} hovered={true} label="Prime Video" />
+          <Tab type="页签" selected={false} hovered={true} label="Prime Video" onClose={() => {}} />
         </div>
         <div>
           <p className="text-[10px] text-[var(--color-text-tertiary)] mb-1">类型=新页签 选中=选中 交互=默认</p>
@@ -70,7 +70,7 @@ export default function App() {
         </div>
         <div>
           <p className="text-[10px] text-[var(--color-text-tertiary)] mb-1">类型=新页签 选中=未选中 交互=悬停</p>
-          <Tab type="新页签" selected={false} hovered={true} />
+          <Tab type="新页签" selected={false} hovered={true} onClose={() => {}} />
         </div>
       </div>
     </div>
