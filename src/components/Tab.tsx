@@ -1,7 +1,6 @@
 import { ReactNode } from 'react'
 import appIcon from '../assets/app-icon.png'
 import newTabIcon from '../assets/new-tab-icon.svg'
-import closeIcon from '../assets/close-icon.svg'
 
 type TabType = '页签' | '新页签'
 
@@ -68,7 +67,9 @@ export function Tab({
               className="shrink-0 size-[16px] flex items-center justify-center rounded-[4px]"
               aria-label="关闭标签"
             >
-              <img src={closeIcon} alt="" className="size-[8px]" style={{ color: 'var(--color-text-primary)' }} />
+              <svg width="8" height="8" viewBox="0 0 8 8" fill="none" className="text-[var(--color-text-primary)]">
+                <path d="M1 1L7 7M7 1L1 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+              </svg>
             </button>
           ) : (
             <div className="shrink-0 size-[16px]" />
@@ -79,7 +80,9 @@ export function Tab({
             className="shrink-0 size-[16px] flex items-center justify-center rounded-[4px]"
             aria-label="关闭标签"
           >
-            <img src={closeIcon} alt="" className="size-[8px]" style={{ color: 'var(--color-text-primary)' }} />
+            <svg width="8" height="8" viewBox="0 0 8 8" fill="none" className="text-[var(--color-text-primary)]">
+              <path d="M1 1L7 7M7 1L1 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+            </svg>
           </button>
         ) : (
           <div className="bg-[var(--color-text-disabled)] h-[10px] w-px shrink-0" />
