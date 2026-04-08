@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import appIcon from '../assets/app-icon.png'
 
 type TabType = '页签' | '新页签'
 type TabState = '选中' | '未选中'
@@ -39,8 +40,8 @@ export function Tab({
         {/* tab info */}
         <div className="flex flex-1 gap-[8px] items-center min-w-0">
           {/* app icon */}
-          <div className="bg-[#009bff] overflow-clip rounded-[8px] shrink-0 size-[16px]">
-            {icon ?? <span className="block size-full" />}
+          <div className="bg-[#009bff] overflow-clip rounded-[8px] shrink-0 size-[16px] relative">
+            {icon ?? <img src={appIcon} alt="" className="absolute inset-0 size-full object-cover pointer-events-none" />}
           </div>
 
           {/* label */}
