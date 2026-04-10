@@ -75,11 +75,18 @@ export default function App() {
         </div>
       </div>
 
-      {/* InputBox */}
+      {/* InputBox state grid */}
       <p className="text-[var(--color-text-tertiary)] text-[12px] mt-10 mb-6">
-        InputBox — implement → verify
+        InputBox — implement → verify (4 states)
       </p>
-      <InputBox />
+      <div className="flex flex-col gap-6">
+        {(['default', 'focus', 'disabled', 'error'] as const).map(state => (
+          <div key={state}>
+            <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">state={state}</p>
+            <InputBox state={state} />
+          </div>
+        ))}
+      </div>
     </div>
   )
 }

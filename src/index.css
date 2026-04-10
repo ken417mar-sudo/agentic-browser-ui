@@ -16,6 +16,9 @@
   --color-border-input-default: #000000;
   --color-state-hover-overlay: rgba(0, 0, 0, 0.04);
   --color-focus-ring: rgba(0, 128, 255, 0.2);
+  --color-border-focus: #1f63ed;
+  --color-border-error: #e53b33;
+  --color-surface-disabled: #f9f9fa;
 
   /* spacing/provisional */
   --spacing-4: 4px;
