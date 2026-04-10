@@ -62,9 +62,9 @@ export function InputBox({
             className="flex items-center justify-center size-[32px]"
             aria-label="发送"
           >
-            <div className="-rotate-90">
-              <div className="bg-[var(--color-surface-button-secondary)] flex items-center justify-center p-[3.5px] rounded-[var(--radius-99)] size-[32px]">
-                <img src={sendIcon} alt="" className="size-[21px]" />
+            <div className="bg-[var(--color-surface-button-secondary)] flex items-center justify-center p-[3.5px] rounded-[var(--radius-99)] size-[32px]">
+              <div className="flex items-center justify-center size-[21px]">
+                <img src={sendIcon} alt="" className="w-[10px] h-[11px]" />
               </div>
             </div>
           </button>
