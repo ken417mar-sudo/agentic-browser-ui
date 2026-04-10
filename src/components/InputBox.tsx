@@ -35,11 +35,13 @@ interface InputBoxProps {
   onSend?: (value: string) => void
 }
 
-const borderClass: Record<InputBoxState, string> = {
-  default:  'border-[0.5px] border-[rgba(0,105,193,0.26)]',
-  focus:    'border-[1.5px] border-[var(--color-border-focus)]',
-  disabled: 'border-[0.5px] border-[rgba(0,105,193,0.26)]',
-  error:    'border border-[var(--color-border-error)]',
+// Geometry is always stable: 1.5px transparent border reserved in all states.
+// Visual ring expressed via inset box-shadow — no layout shift between states.
+const ringClass: Record<InputBoxState, string> = {
+  default:  'border-[1.5px] border-transparent shadow-[0px_4px_32px_0px_rgba(10,88,245,0.06),inset_0_0_0_0.5px_rgba(0,105,193,0.26)]',
+  focus:    'border-[1.5px] border-[var(--color-border-focus)] shadow-[0px_4px_32px_0px_rgba(10,88,245,0.06)]',
+  disabled: 'border-[1.5px] border-transparent shadow-[0px_4px_32px_0px_rgba(10,88,245,0.06),inset_0_0_0_0.5px_rgba(0,105,193,0.26)]',
+  error:    'border-[1.5px] border-transparent shadow-[0px_4px_32px_0px_rgba(10,88,245,0.06),inset_0_0_0_1px_var(--color-border-error)]',
 }
 
 const bgClass: Record<InputBoxState, string> = {
@@ -61,8 +63,8 @@ export function InputBox({
     <div
       className={[
         bgClass[state],
-        borderClass[state],
-        'border-solid flex flex-col gap-[12px] items-start justify-center w-[720px] pb-[12px] pt-[16px] px-[12px] rounded-[var(--radius-24)] shadow-[0px_4px_32px_0px_rgba(10,88,245,0.06)]',
+        ringClass[state],
+        'border-solid flex flex-col gap-[12px] items-start justify-center w-[720px] pb-[12px] pt-[16px] px-[12px] rounded-[var(--radius-24)]',
         isDisabled ? 'opacity-55' : '',
       ].join(' ')}
     >
