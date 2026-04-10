@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Tab } from './components/Tab'
+import { InputBox } from './components/InputBox'
 import './index.css'
 
 const TABS = [
@@ -73,6 +74,12 @@ export default function App() {
           <Tab type="新页签" selected={false} hovered={true} onClose={() => {}} />
         </div>
       </div>
+
+      {/* InputBox */}
+      <p className="text-[var(--color-text-tertiary)] text-[12px] mt-10 mb-6">
+        InputBox — implement → verify
+      </p>
+      <InputBox />
     </div>
   )
 }

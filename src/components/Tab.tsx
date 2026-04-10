@@ -1,5 +1,7 @@
-import { ReactNode } from 'react'
+import { useState, type ReactNode } from 'react'
 import appIcon from '../assets/app-icon.png'
+import closeOffIcon from '../assets/figma/close-off@1x.svg'
+import closeOnIcon from '../assets/figma/close-on@1x.svg'
 import newTabIcon from '../assets/new-tab-icon.svg'
 
 type TabType = '页签' | '新页签'
@@ -22,6 +24,19 @@ export function Tab({
   onClose,
 }: TabProps) {
   const defaultLabel = type === '新页签' ? 'Home' : 'Prime Video'
+  const [closeHovered, setCloseHovered] = useState(false)
+  const closeIcon = closeHovered ? closeOnIcon : closeOffIcon
+  const closeButton = (
+    <button
+      onClick={onClose}
+      onMouseEnter={() => setCloseHovered(true)}
+      onMouseLeave={() => setCloseHovered(false)}
+      className="shrink-0 size-[16px] flex items-center justify-center"
+      aria-label="关闭标签"
+    >
+      <img src={closeIcon} alt="" className="block size-[16px] pointer-events-none" />
+    </button>
+  )
 
   return (
     <div className="flex h-[40px] items-center w-[192px] p-[4px] relative">
@@ -62,28 +77,12 @@ export function Tab({
         {/* right side: close button (selected) or divider (unselected) */}
         {selected ? (
           selected && hovered && onClose ? (
-            <button
-              onClick={onClose}
-              className="shrink-0 size-[16px] flex items-center justify-center rounded-[4px]"
-              aria-label="关闭标签"
-            >
-              <svg width="8" height="8" viewBox="0 0 8 8" fill="none" className="text-[var(--color-text-primary)]">
-                <path d="M1 1L7 7M7 1L1 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-              </svg>
-            </button>
+            closeButton
           ) : (
             <div className="shrink-0 size-[16px]" />
           )
         ) : hovered && onClose ? (
-          <button
-            onClick={onClose}
-            className="shrink-0 size-[16px] flex items-center justify-center rounded-[4px]"
-            aria-label="关闭标签"
-          >
-            <svg width="8" height="8" viewBox="0 0 8 8" fill="none" className="text-[var(--color-text-primary)]">
-              <path d="M1 1L7 7M7 1L1 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-            </svg>
-          </button>
+          closeButton
         ) : (
           <div className="bg-[var(--color-text-disabled)] h-[10px] w-px shrink-0" />
         )}
