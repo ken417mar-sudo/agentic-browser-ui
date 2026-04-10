@@ -1,8 +1,16 @@
 import { useState, type ReactNode } from 'react'
 import appIcon from '../assets/app-icon.png'
-import closeOffIcon from '../assets/figma/close-off@1x.svg'
-import closeOnIcon from '../assets/figma/close-on@1x.svg'
 import newTabIcon from '../assets/new-tab-icon.svg'
+
+// Inline SVG: close X paths, color via currentColor
+function CloseIcon({ className }: { className?: string }) {
+  return (
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+      <path d="M5.17152 5.17158L10.8284 10.8284" stroke="currentColor" strokeLinecap="round"/>
+      <path d="M10.8285 5.17158L5.17163 10.8284" stroke="currentColor" strokeLinecap="round"/>
+    </svg>
+  )
+}
 
 type TabType = '页签' | '新页签'
 
@@ -25,7 +33,7 @@ export function Tab({
 }: TabProps) {
   const defaultLabel = type === '新页签' ? 'Home' : 'Prime Video'
   const [closeHovered, setCloseHovered] = useState(false)
-  const closeIcon = closeHovered ? closeOnIcon : closeOffIcon
+
   const closeButton = (
     <button
       onClick={onClose}
@@ -34,13 +42,13 @@ export function Tab({
       className="shrink-0 size-[16px] flex items-center justify-center"
       aria-label="关闭标签"
     >
-      <img src={closeIcon} alt="" className="block size-[16px] pointer-events-none" />
+      <CloseIcon className={closeHovered ? 'text-[var(--color-text-primary)]' : 'text-[var(--color-text-disabled)]'} />
     </button>
   )
 
   return (
     <div className="flex h-[40px] items-center w-[192px] p-[4px] relative">
-      {/* hover overlay — applies to both selected and unselected */}
+      {/* hover overlay */}
       {hovered && (
         <div className="absolute inset-[4px] rounded-[8px] bg-[var(--color-state-hover-overlay)] pointer-events-none" />
       )}
@@ -54,7 +62,6 @@ export function Tab({
         ].join(' ')}
       >
         <div className="flex flex-1 gap-[8px] items-center min-w-0">
-          {/* icon: 新页签 uses plain icon, 页签 uses app icon with colored bg */}
           {type === '新页签' ? (
             <div className="shrink-0 size-[16px] relative">
               {icon ?? <img src={newTabIcon} alt="" className="size-full" />}
@@ -65,7 +72,6 @@ export function Tab({
             </div>
           )}
 
-          {/* label */}
           <p
             className="flex-1 min-w-0 truncate text-[12px] leading-normal text-[var(--color-text-primary)]"
             style={{ fontFamily: "'HYQiHei:60S', sans-serif" }}
@@ -74,7 +80,6 @@ export function Tab({
           </p>
         </div>
 
-        {/* right side: close button (selected) or divider (unselected) */}
         {selected ? (
           selected && hovered && onClose ? (
             closeButton

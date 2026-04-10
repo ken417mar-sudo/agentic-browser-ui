@@ -1,7 +1,31 @@
-import icIcon from '../assets/figma/inputbox-ic@1x.svg'
-import modelToggleIcon from '../assets/figma/inputbox-model-toggle@1x.svg'
-import voiceIcon from '../assets/figma/inputbox-voice@1x.svg'
 import sendIcon from '../assets/figma/inputbox-send@1x.svg'
+
+// Inline SVGs — color via currentColor
+function PlusIcon({ className }: { className?: string }) {
+  return (
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+      <path d="M3.33325 10L16.6666 10" stroke="currentColor" strokeWidth="1.25"/>
+      <path d="M10 3.33334V16.6667" stroke="currentColor" strokeWidth="1.25"/>
+    </svg>
+  )
+}
+
+function ModelToggleIcon({ className }: { className?: string }) {
+  return (
+    <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+      <path d="M9 9.5L6 11.5L3 9.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  )
+}
+
+function VoiceIcon({ className }: { className?: string }) {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+      <path d="M14.4159 7.50576C14.4159 6.17119 13.3341 5.08929 11.9995 5.08929C10.6649 5.08929 9.58301 6.17119 9.58301 7.50576V11.3031C9.58301 12.6377 10.6649 13.7195 11.9995 13.7195C13.3341 13.7195 14.4159 12.6377 14.4159 11.3031V7.50576Z" stroke="currentColor" strokeWidth="1.28571" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M17.1792 10.3124C17.534 10.3125 17.8216 10.6001 17.8218 10.955C17.8218 12.4988 17.2084 13.9795 16.1167 15.0712C15.1773 16.0104 13.9499 16.5941 12.6421 16.7391V18.2059C12.6421 18.561 12.3545 18.8485 11.9995 18.8485C11.6445 18.8485 11.3569 18.561 11.3569 18.2059V16.7391C10.0504 16.5935 8.82385 16.0096 7.88525 15.0712C6.79385 13.9796 6.18018 12.4986 6.18018 10.955C6.18039 10.6002 6.46802 10.3126 6.82275 10.3124C7.17766 10.3124 7.46512 10.6001 7.46533 10.955C7.46533 12.1576 7.94415 13.3115 8.79443 14.162C9.64475 15.0122 10.7981 15.4899 12.0005 15.4901C13.2032 15.4901 14.357 15.0124 15.2075 14.162C16.0581 13.3115 16.5366 12.1578 16.5366 10.955C16.5368 10.6002 16.8245 10.3126 17.1792 10.3124Z" fill="currentColor"/>
+    </svg>
+  )
+}
 
 interface InputBoxProps {
   placeholder?: string
@@ -32,9 +56,9 @@ export function InputBox({
       <div className="flex h-[32px] items-center justify-between w-full">
         {/* left: function icons */}
         <div className="flex gap-[10px] h-[32px] items-center">
-          {/* ic_ hotzone */}
+          {/* plus/add hotzone */}
           <div className="relative rounded-[var(--radius-8)] size-[32px] flex items-center justify-center">
-            <img src={icIcon} alt="" className="size-[20px]" />
+            <PlusIcon className="size-[20px] text-[var(--color-text-primary)]" />
           </div>
 
           {/* model toggle switch */}
@@ -45,7 +69,7 @@ export function InputBox({
             >
               {modelLabel}
             </p>
-            <img src={modelToggleIcon} alt="" className="h-[20px] w-[12px]" />
+            <ModelToggleIcon className="text-[var(--color-text-tertiary)]" />
           </div>
         </div>
 
@@ -53,7 +77,7 @@ export function InputBox({
         <div className="flex gap-[16px] h-[32px] items-center">
           {/* voice button */}
           <div className="flex items-center justify-center rounded-[var(--radius-8)] size-[32px]">
-            <img src={voiceIcon} alt="语音" className="size-[24px]" />
+            <VoiceIcon className="size-[24px] text-[var(--color-text-primary)]" />
           </div>
 
           {/* send button */}
