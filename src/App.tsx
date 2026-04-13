@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Tab } from './components/Tab'
 import { InputBox } from './components/InputBox'
+import { Toolbar } from './components/Toolbar'
 import './index.css'
 
 const TABS = [
@@ -72,6 +73,43 @@ export default function App() {
         <div>
           <p className="text-[10px] text-[var(--color-text-tertiary)] mb-1">类型=新页签 选中=未选中 交互=悬停</p>
           <Tab type="新页签" selected={false} hovered={true} onClose={() => {}} />
+        </div>
+      </div>
+
+      {/* Toolbar state grid */}
+      <p className="text-[var(--color-text-tertiary)] text-[12px] mt-10 mb-6">
+        Toolbar — implement → verify
+      </p>
+      <div className="flex flex-col gap-6">
+        <div>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">canGoBack=true canGoForward=false (default)</p>
+          <div className="bg-[var(--color-surface-window)] rounded-[12px] overflow-hidden">
+            <Toolbar />
+          </div>
+        </div>
+        <div>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">canGoBack=false canGoForward=false (both disabled)</p>
+          <div className="bg-[var(--color-surface-window)] rounded-[12px] overflow-hidden">
+            <Toolbar canGoBack={false} canGoForward={false} />
+          </div>
+        </div>
+        <div>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">canGoBack=true canGoForward=true</p>
+          <div className="bg-[var(--color-surface-window)] rounded-[12px] overflow-hidden">
+            <Toolbar canGoBack={true} canGoForward={true} urlText="https://github.com" />
+          </div>
+        </div>
+        <div>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">bookmarked=true</p>
+          <div className="bg-[var(--color-surface-window)] rounded-[12px] overflow-hidden">
+            <Toolbar bookmarked={true} urlText="https://github.com" />
+          </div>
+        </div>
+        <div>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">urlFocused=true</p>
+          <div className="bg-[var(--color-surface-window)] rounded-[12px] overflow-hidden">
+            <Toolbar urlFocused={true} urlText="https://github.com" />
+          </div>
         </div>
       </div>
 
