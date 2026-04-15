@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Tab } from './components/Tab'
 import { InputBox } from './components/InputBox'
 import { Toolbar } from './components/Toolbar'
+import { Dialog, DialogButton } from './components/Dialog'
 import './index.css'
 
 const TABS = [
@@ -124,6 +125,61 @@ export default function App() {
             <InputBox state={state} />
           </div>
         ))}
+      </div>
+      {/* Dialog state grid */}
+      <p className="text-[var(--color-text-tertiary)] text-[12px] mt-10 mb-6">
+        Dialog — implement → verify
+      </p>
+      <div className="flex flex-wrap gap-8">
+        <div>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">layout=single content=text close=default</p>
+          <Dialog layout="single" contentVariant="text" primaryLabel="去登录" onClose={() => {}} />
+        </div>
+        <div>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">layout=vertical content=text close=default</p>
+          <Dialog layout="vertical" contentVariant="text" primaryLabel="去登录" secondaryLabel="取消" onClose={() => {}} />
+        </div>
+        <div>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">layout=horizontal content=text close=default</p>
+          <Dialog layout="horizontal" contentVariant="text" primaryLabel="去登录" secondaryLabel="取消" onClose={() => {}} />
+        </div>
+        <div>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">layout=single content=title-left close=default</p>
+          <Dialog layout="single" contentVariant="title-left" title="提示文案" description="为了保障您的信息安全，请登录后使用" primaryLabel="去登录" onClose={() => {}} />
+        </div>
+        <div>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">layout=single content=text close=hover (forced)</p>
+          <Dialog layout="single" contentVariant="text" closeVariant="hover" primaryLabel="去登录" onClose={() => {}} />
+        </div>
+        <div>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">layout=single content=text close=none</p>
+          <Dialog layout="single" contentVariant="text" closeVariant="none" primaryLabel="去登录" />
+        </div>
+        <div>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">layout=single content=text close=circle</p>
+          <Dialog layout="single" contentVariant="text" closeVariant="circle" primaryLabel="去登录" onClose={() => {}} />
+        </div>
+        <div>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">layout=horizontal content=image</p>
+          <Dialog layout="horizontal" contentVariant="image" imageSrc="https://www.figma.com/api/mcp/asset/2b7d03db-fd92-4525-8599-a02384ba40ba" description="这里请填充描述文案，如果不需要文案可删除" primaryLabel="去登录" secondaryLabel="取消" onClose={() => {}} />
+        </div>
+      </div>
+
+      {/* Dialog button type axis */}
+      <p className="text-[var(--color-text-tertiary)] text-[10px] mt-6 mb-3">Dialog button type axis (deferred: hover state is interactive only)</p>
+      <div className="flex gap-4 items-end flex-wrap">
+        <div>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">button=solid (default)</p>
+          <div className="w-[256px]"><DialogButton type="solid" label="去登录" /></div>
+        </div>
+        <div>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">button=outline (default)</p>
+          <div className="w-[256px]"><DialogButton type="outline" label="取消" /></div>
+        </div>
+        <div>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">button=text (default)</p>
+          <div className="w-[256px]"><DialogButton type="text" label="取消" /></div>
+        </div>
       </div>
     </div>
   )
