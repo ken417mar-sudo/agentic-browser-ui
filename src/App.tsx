@@ -3,6 +3,7 @@ import { Tab } from './components/Tab'
 import { InputBox } from './components/InputBox'
 import { Toolbar } from './components/Toolbar'
 import { Dialog, DialogButton } from './components/Dialog'
+import dialogImagePlaceholder from './assets/figma/dialog-image-placeholder@1x.png'
 import './index.css'
 
 const TABS = [
@@ -161,12 +162,18 @@ export default function App() {
         </div>
         <div>
           <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">layout=horizontal content=image</p>
-          <Dialog layout="horizontal" contentVariant="image" imageSrc="https://www.figma.com/api/mcp/asset/2b7d03db-fd92-4525-8599-a02384ba40ba" description="这里请填充描述文案，如果不需要文案可删除" primaryLabel="去登录" secondaryLabel="取消" onClose={() => {}} />
+          <Dialog layout="horizontal" contentVariant="image" imageSrc={dialogImagePlaceholder} description="这里请填充描述文案，如果不需要文案可删除" primaryLabel="去登录" secondaryLabel="取消" onClose={() => {}} />
         </div>
       </div>
 
-      {/* Dialog button type axis */}
-      <p className="text-[var(--color-text-tertiary)] text-[10px] mt-6 mb-3">Dialog button type axis (deferred: hover state is interactive only)</p>
+      {/* Dialog button type axis
+          type × state matrix:
+          solid  × default ✓  solid  × hover ✓
+          outline × default ✓  outline × hover ✓
+          text   × default ✓  text   × hover ✓  (text color #999→#333)
+          All 6 combinations implemented. Interactive-only (no static verify card for hover).
+      */}
+      <p className="text-[var(--color-text-tertiary)] text-[10px] mt-6 mb-3">Dialog button type axis — all 6 type×state combos implemented (hover is interactive)</p>
       <div className="flex gap-4 items-end flex-wrap">
         <div>
           <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">button=solid (default)</p>
