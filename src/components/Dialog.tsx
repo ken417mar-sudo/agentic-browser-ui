@@ -75,7 +75,7 @@ export function DialogButton({ type = 'solid', label = '确认', onClick }: Dial
   const textStyles: Record<ButtonType, string> = {
     solid: 'text-white text-[14px] font-["HYQiHei:60S",sans-serif]',
     outline: 'text-[var(--color-text-primary)] text-[14px] font-["HYQiHei:60S",sans-serif]',
-    text: 'text-[var(--color-text-tertiary)] text-[14px] font-["HYQiHei:60S",sans-serif]',
+    text: `${hovered ? 'text-[var(--color-text-primary)]' : 'text-[var(--color-text-tertiary)]'} text-[14px] font-["HYQiHei:60S",sans-serif]`,
   }
 
   return (
