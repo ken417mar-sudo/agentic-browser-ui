@@ -3,16 +3,42 @@
     "id": "1714:1013",
     "original": "close-off",
     "english": "close-off",
-    "files": [
-      "close-off@1x.svg"
-    ]
+    "files": ["close-off@1x.svg"]
   },
   {
     "id": "1714:1017",
     "original": "close-on",
     "english": "close-on",
-    "files": [
-      "close-on@1x.svg"
-    ]
+    "files": ["close-on@1x.svg"]
+  },
+  {
+    "id": "I1708:30180;1721:11439",
+    "original": "切图/图标/视频",
+    "english": "aitoolsrow-video",
+    "files": ["aitoolsrow-video@1x.svg"]
+  },
+  {
+    "id": "I1708:30180;1721:11444",
+    "original": "切图/图标/定时任务",
+    "english": "aitoolsrow-schedule",
+    "files": ["aitoolsrow-schedule@1x.svg"]
+  },
+  {
+    "id": "I1708:30180;1721:11451",
+    "original": "切图/图标/技能",
+    "english": "aitoolsrow-skill",
+    "files": ["aitoolsrow-skill@1x.svg"]
+  },
+  {
+    "id": "I1708:30180;1721:11458",
+    "original": "切图/图标/知识库",
+    "english": "aitoolsrow-knowledge",
+    "files": ["aitoolsrow-knowledge@1x.svg"]
+  },
+  {
+    "id": "I1708:30180;1708:30403",
+    "original": "切图/图标/更多",
+    "english": "aitoolsrow-more",
+    "files": ["aitoolsrow-more@1x.svg"]
   }
 ]
