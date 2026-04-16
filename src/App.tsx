@@ -196,13 +196,13 @@ export default function App() {
       <div className="flex flex-col gap-6">
         <div>
           <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">default (all pills)</p>
-          <div className="w-[600px]">
+          <div className="w-[704px]">
             <AIToolsRow />
           </div>
         </div>
         <div>
           <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">hover / active — interactive (mouse over each pill)</p>
-          <div className="w-[600px]">
+          <div className="w-[704px]">
             <AIToolsRow />
           </div>
         </div>
