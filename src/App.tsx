@@ -3,6 +3,7 @@ import { Tab } from './components/Tab'
 import { InputBox } from './components/InputBox'
 import { Toolbar } from './components/Toolbar'
 import { Dialog, DialogButton } from './components/Dialog'
+import AIToolsRow from './components/AIToolsRow'
 import dialogImagePlaceholder from './assets/figma/dialog-image-placeholder@1x.png'
 import './index.css'
 
@@ -188,6 +189,25 @@ export default function App() {
           <div className="w-[256px]"><DialogButton type="text" label="取消" /></div>
         </div>
       </div>
+      {/* AIToolsRow verify cards */}
+      <p className="text-[var(--color-text-tertiary)] text-[12px] mt-10 mb-6">
+        AIToolsRow — implement → verify
+      </p>
+      <div className="flex flex-col gap-6">
+        <div>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">default (all pills)</p>
+          <div className="w-[704px]">
+            <AIToolsRow />
+          </div>
+        </div>
+        <div>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">hover / active — interactive (mouse over each pill)</p>
+          <div className="w-[704px]">
+            <AIToolsRow />
+          </div>
+        </div>
+      </div>
+
     </div>
   )
 }
