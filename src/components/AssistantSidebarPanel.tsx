@@ -1,6 +1,6 @@
-import type { SVGProps } from 'react'
 import { InputBox } from './InputBox'
 import NewTaskSvg from '../assets/figma/assistant-title-new-task@1x.svg?react'
+import HistorySvg from '../assets/figma/assistant-title-history@1x.svg?react'
 import AssistantLogoSvg from '../assets/figma/assistant-sidebar-chip-logo@1x.svg?react'
 import PromptArrowSvg from '../assets/figma/assistant-prompt-arrow@1x.svg?react'
 
@@ -9,30 +9,6 @@ const DEFAULT_SUGGESTIONS = [
   '如何快速有效的浏览BBC的重要新闻？',
   '推荐BBC上的深度分析文章',
 ]
-
-function HistoryIcon(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-      <path
-        d="M8 2.11111C11.2524 2.11111 13.8889 4.74765 13.8889 8C13.8887 11.2523 11.2523 13.8887 8 13.8889C4.74765 13.8889 2.11111 11.2524 2.11111 8C2.11111 4.74765 4.74765 2.11111 8 2.11111Z"
-        stroke="currentColor"
-        strokeWidth="1"
-      />
-      <path
-        d="M8 4.44446V8.11112"
-        stroke="currentColor"
-        strokeWidth="1"
-        strokeLinecap="round"
-      />
-      <path
-        d="M8 8.11108L10.3333 9.44441"
-        stroke="currentColor"
-        strokeWidth="1"
-        strokeLinecap="round"
-      />
-    </svg>
-  )
-}
 
 interface AssistantSidebarChipProps {
   onClick?: () => void
@@ -126,7 +102,7 @@ export function AssistantSidebarPanel({
             className="flex size-[24px] items-center justify-center rounded-[8px] text-[var(--color-text-primary)]"
             aria-label="历史记录"
           >
-            <HistoryIcon className="size-[16px] shrink-0" />
+            <HistorySvg className="size-[16px] shrink-0" />
           </button>
         </div>
         <AssistantSidebarChip onClick={onAssistantClick} />
