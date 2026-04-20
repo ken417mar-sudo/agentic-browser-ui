@@ -77,7 +77,7 @@ function AssistantPromptChip({
     <button
       type="button"
       onClick={onClick}
-      className="flex items-center justify-end gap-[4px] rounded-[12px] border-[0.5px] border-[rgba(0,0,0,0.12)] bg-[rgba(0,0,0,0.02)] px-[12px] py-[10px]"
+      className="flex items-center justify-between gap-[4px] rounded-[12px] border-[0.5px] border-[rgba(0,0,0,0.12)] bg-[rgba(0,0,0,0.02)] px-[12px] py-[10px]"
     >
       <span
         className="whitespace-nowrap text-[14px] leading-[20px] text-[var(--color-text-primary)]"
