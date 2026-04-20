@@ -30,8 +30,10 @@ type InputBoxState = 'default' | 'focus' | 'disabled' | 'error'
 
 interface InputBoxProps {
   state?: InputBoxState
+  size?: 'default' | 'compact'
   placeholder?: string
   modelLabel?: string
+  className?: string
   onSend?: (value: string) => void
 }
 
@@ -53,19 +55,24 @@ const bgClass: Record<InputBoxState, string> = {
 
 export function InputBox({
   state = 'default',
+  size = 'default',
   placeholder = '输入要找内容或问题',
   modelLabel = '默认模型',
+  className = '',
   onSend,
 }: InputBoxProps) {
   const isDisabled = state === 'disabled'
+  const widthClass = size === 'compact' ? 'w-[368px]' : 'w-[720px]'
 
   return (
     <div
       className={[
         bgClass[state],
         ringClass[state],
-        'border-solid flex flex-col gap-[12px] items-start justify-center w-[720px] pb-[12px] pt-[16px] px-[12px] rounded-[var(--radius-24)]',
+        widthClass,
+        'border-solid flex flex-col gap-[12px] items-start justify-center pb-[12px] pt-[16px] px-[12px] rounded-[var(--radius-24)]',
         isDisabled ? 'opacity-55' : '',
+        className,
       ].join(' ')}
     >
       {/* input area */}

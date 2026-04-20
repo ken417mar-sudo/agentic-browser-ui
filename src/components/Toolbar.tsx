@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react'
 import BackSvg from '../assets/figma/toolbar-back@1x.svg?react'
 import ForwardSvg from '../assets/figma/toolbar-forward@1x.svg?react'
 import RefreshSvg from '../assets/figma/toolbar-refresh@1x.svg?react'
@@ -28,6 +29,7 @@ interface ToolbarProps {
   urlText?: string
   bookmarked?: boolean
   urlFocused?: boolean
+  assistantButton?: ReactNode | null
   onBack?: () => void
   onForward?: () => void
   onRefresh?: () => void
@@ -42,6 +44,7 @@ export function Toolbar({
   urlText = '我一直都在',
   bookmarked = false,
   urlFocused = false,
+  assistantButton,
   onBack,
   onForward,
   onRefresh,
@@ -128,19 +131,21 @@ export function Toolbar({
         >
           <MoreSvg className="size-[16px] text-[var(--color-text-secondary)]" />
         </button>
-        <button
-          onClick={onChat}
-          className="bg-gradient-to-r from-[rgba(65,231,154,0.3)] to-[rgba(106,181,255,0.3)] flex gap-[2px] h-[24px] items-center justify-center overflow-hidden pl-[4px] pr-[12px] rounded-[99px]"
-          aria-label="Chat"
-        >
-          <ExpandSvg className="size-[16px] shrink-0 text-[var(--color-text-secondary)]" />
-          <span
-            className="text-[12px] leading-normal text-[var(--color-text-secondary)] whitespace-nowrap"
-            style={{ fontFamily: "'SF Pro', sans-serif" }}
+        {assistantButton === undefined ? (
+          <button
+            onClick={onChat}
+            className="bg-gradient-to-r from-[rgba(65,231,154,0.3)] to-[rgba(106,181,255,0.3)] flex gap-[2px] h-[24px] items-center justify-center overflow-hidden pl-[4px] pr-[12px] rounded-[99px]"
+            aria-label="Chat"
           >
-            Chat
-          </span>
-        </button>
+            <ExpandSvg className="size-[16px] shrink-0 text-[var(--color-text-secondary)]" />
+            <span
+              className="text-[12px] leading-normal text-[var(--color-text-secondary)] whitespace-nowrap"
+              style={{ fontFamily: "'SF Pro', sans-serif" }}
+            >
+              Chat
+            </span>
+          </button>
+        ) : assistantButton}
       </div>
     </div>
   )
