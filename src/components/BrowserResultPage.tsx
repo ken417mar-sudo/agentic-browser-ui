@@ -86,12 +86,20 @@ export function BrowserResultPage({
               )
             }
           />
-          <div className="flex h-[816px] items-start justify-center overflow-hidden">
-            <img
-              src={browserResultContent}
-              alt=""
-              className="h-[816px] w-[762px] max-w-none object-cover mix-blend-darken"
-            />
+          <div className="relative flex h-[816px] items-start justify-center overflow-hidden">
+            <div className="pointer-events-none relative h-[816px] w-[762px] overflow-hidden mix-blend-darken">
+              <img
+                src={browserResultContent}
+                alt=""
+                className="absolute max-w-none"
+                style={{
+                  width: '232.66%',
+                  height: '125.55%',
+                  left: '-42.23%',
+                  top: '-21.63%',
+                }}
+              />
+            </div>
           </div>
         </div>
 
