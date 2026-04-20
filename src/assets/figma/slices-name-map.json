@@ -40,5 +40,11 @@
     "original": "切图/图标/更多",
     "english": "aitoolsrow-more",
     "files": ["aitoolsrow-more@1x.svg"]
+  },
+  {
+    "id": "1708:30289",
+    "original": "历史记录",
+    "english": "assistant-title-history",
+    "files": ["assistant-title-history@1x.svg"]
   }
 ]

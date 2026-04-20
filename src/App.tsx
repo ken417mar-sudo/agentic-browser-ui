@@ -5,6 +5,7 @@ import { Toolbar } from './components/Toolbar'
 import { Dialog, DialogButton } from './components/Dialog'
 import AIToolsRow from './components/AIToolsRow'
 import Sidebar from './components/Sidebar'
+import { BrowserResultPage } from './components/BrowserResultPage'
 import dialogImagePlaceholder from './assets/figma/dialog-image-placeholder@1x.png'
 import './index.css'
 
@@ -217,6 +218,19 @@ export default function App() {
         <div>
           <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">expanded / default-only (formal source board)</p>
           <Sidebar />
+        </div>
+      </div>
+
+      {/* BrowserResultPage verify card */}
+      <p className="text-[var(--color-text-tertiary)] text-[12px] mt-10 mb-6">
+        BrowserResultPage / AssistantSidebar — implement
+      </p>
+      <div className="flex flex-col gap-6">
+        <div>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">click 助手按钮 to toggle the right sidebar</p>
+          <div className="overflow-auto rounded-[16px]">
+            <BrowserResultPage />
+          </div>
         </div>
       </div>
 
