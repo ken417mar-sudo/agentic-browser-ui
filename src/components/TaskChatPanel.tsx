@@ -111,7 +111,7 @@ export default function TaskChatPanel() {
 
         {/* Input area */}
         <div className="shrink-0 w-full">
-          <InputBox />
+          <InputBox size="compact" />
         </div>
       </div>
     </div>
