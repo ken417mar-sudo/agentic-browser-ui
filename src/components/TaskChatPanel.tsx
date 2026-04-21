@@ -49,7 +49,7 @@ export default function TaskChatPanel() {
       style={{ width: 400, height: 852 }}
     >
       {/* Header */}
-      <div className="flex items-center pl-[16px] h-[56px] shrink-0 border-b-[0.5px] border-solid border-[rgba(0,0,0,0.08)]">
+      <div className="flex items-center pl-[16px] h-[56px] shrink-0">
         <div className="flex items-center gap-[4px]">
           <span
             className="text-[14px] leading-[20px] text-[#333333] whitespace-nowrap"

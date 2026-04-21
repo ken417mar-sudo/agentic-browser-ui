@@ -32,15 +32,16 @@ export default function WorkspacePage() {
           <TaskChatPanel />
           {/* WorkspacePreview — wallpaper */}
           <div
-            className="relative overflow-hidden shrink-0"
+            className="bg-white overflow-clip relative shrink-0"
             style={{ width: 1144, height: 852 }}
           >
-            <img
-              src={wallpaper}
-              alt=""
-              className="absolute object-cover opacity-60 pointer-events-none"
-              style={{ inset: '-318px -913px -550px -679px', width: 2736, height: 1720 }}
-            />
+            <div className="absolute blur-[100px]" style={{ inset: '-318px -913px -550px -679px' }}>
+              <img
+                src={wallpaper}
+                alt=""
+                className="absolute inset-0 max-w-none object-cover opacity-60 pointer-events-none size-full"
+              />
+            </div>
           </div>
         </div>
       </div>
