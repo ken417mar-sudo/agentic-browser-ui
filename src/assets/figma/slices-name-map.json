@@ -46,5 +46,59 @@
     "original": "历史记录",
     "english": "assistant-title-history",
     "files": ["assistant-title-history@1x.svg"]
+  },
+  {
+    "id": "2025:11957",
+    "original": "电脑",
+    "english": "workspacetoolbar-desktop",
+    "files": ["workspacetoolbar-desktop@1x.svg"]
+  },
+  {
+    "id": "2025:11962",
+    "original": "手机",
+    "english": "workspacetoolbar-mobile",
+    "files": ["workspacetoolbar-mobile@1x.svg"]
+  },
+  {
+    "id": "2025:11966",
+    "original": "自定义",
+    "english": "workspacetoolbar-custom",
+    "files": ["workspacetoolbar-custom@1x.svg"]
+  },
+  {
+    "id": "2025:11978",
+    "original": "书签",
+    "english": "workspacetoolbar-bookmark",
+    "files": ["workspacetoolbar-bookmark@1x.svg"]
+  },
+  {
+    "id": "2025:11984",
+    "original": "More",
+    "english": "workspacetoolbar-more",
+    "files": ["workspacetoolbar-more@1x.svg"]
+  },
+  {
+    "id": "2025:12090",
+    "original": "图标",
+    "english": "taskchatpanel-expand",
+    "files": ["taskchatpanel-expand@1x.svg"]
+  },
+  {
+    "id": "2025:12265",
+    "original": "分析类目",
+    "english": "analysischip",
+    "files": ["analysischip@1x.svg"]
+  },
+  {
+    "id": "I2025:12265;994:48282",
+    "original": "Check-one (校验)",
+    "english": "analysischip-check",
+    "files": ["analysischip-check@1x.svg"]
+  },
+  {
+    "id": "1708:29717",
+    "original": "loading",
+    "english": "analysisstatusrow-loading",
+    "files": ["analysisstatusrow-loading@1x.svg"]
   }
 ]
