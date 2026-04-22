@@ -66,10 +66,22 @@
     "files": ["workspacetoolbar-custom@1x.svg"]
   },
   {
+    "id": "2025:11974",
+    "original": "分割线",
+    "english": "workspacetoolbar-divider",
+    "files": ["workspacetoolbar-divider@1x.svg"]
+  },
+  {
     "id": "2025:11978",
     "original": "书签",
     "english": "workspacetoolbar-bookmark",
     "files": ["workspacetoolbar-bookmark@1x.svg"]
+  },
+  {
+    "id": "I2025:11978;490:39631",
+    "original": "icon",
+    "english": "workspacetoolbar-bookmark-inner",
+    "files": ["workspacetoolbar-bookmark-inner@1x.svg"]
   },
   {
     "id": "2025:11984",
