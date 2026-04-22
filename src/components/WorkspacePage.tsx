@@ -1,6 +1,6 @@
 import TitleBar from './TitleBar'
 import WorkspaceToolbar from './WorkspaceToolbar'
-import Sidebar from './Sidebar'
+import WorkspaceSidebar from './WorkspaceSidebar'
 import TaskChatPanel from './TaskChatPanel'
 import wallpaper from '../assets/figma/workspacepreview-wallpaper@1x.png'
 
@@ -28,7 +28,7 @@ export default function WorkspacePage() {
 
         {/* Content row: Sidebar (48) + TaskChatPanel (400) + WorkspacePreview (1144) */}
         <div className="flex" style={{ height: 852 }}>
-          <Sidebar />
+          <WorkspaceSidebar />
           <TaskChatPanel />
           {/* WorkspacePreview — wallpaper */}
           <div
