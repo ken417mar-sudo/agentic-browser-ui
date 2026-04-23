@@ -1,16 +1,8 @@
 import { useState, type ReactNode } from 'react'
 import appIcon from '../assets/app-icon.png'
 import newTabIcon from '../assets/new-tab-icon.svg'
-
-// Inline SVG: close X paths, color via currentColor
-function CloseIcon({ className }: { className?: string }) {
-  return (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
-      <path d="M5.17152 5.17158L10.8284 10.8284" stroke="currentColor" strokeLinecap="round"/>
-      <path d="M10.8285 5.17158L5.17163 10.8284" stroke="currentColor" strokeLinecap="round"/>
-    </svg>
-  )
-}
+import closeOffIcon from '../assets/figma/close-off@1x.svg'
+import closeOnIcon from '../assets/figma/close-on@1x.svg'
 
 type TabType = '页签' | '新页签'
 
@@ -42,7 +34,7 @@ export function Tab({
       className="shrink-0 size-[16px] flex items-center justify-center"
       aria-label="关闭标签"
     >
-      <CloseIcon className={closeHovered ? 'text-[var(--color-text-primary)]' : 'text-[var(--color-text-disabled)]'} />
+      <img src={closeHovered ? closeOnIcon : closeOffIcon} alt="" className="size-[16px]" />
     </button>
   )
 
