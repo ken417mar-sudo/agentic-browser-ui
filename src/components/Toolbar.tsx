@@ -98,7 +98,7 @@ export function Toolbar({
         <ProxySvg className="size-[16px] shrink-0 text-[var(--color-text-tertiary)]" />
         <p
           className={`text-[12px] leading-[14px] whitespace-nowrap ${
-            urlFocused ? 'text-[#333]' : 'text-[var(--color-text-tertiary)]'
+            urlFocused ? 'text-[var(--color-text-primary)]' : 'text-[var(--color-text-tertiary)]'
           }`}
           style={{ fontFamily: "'HYQiHei:55S', sans-serif" }}
         >
