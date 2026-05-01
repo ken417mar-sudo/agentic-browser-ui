@@ -98,7 +98,37 @@ function SidebarHistoryItem({ label }: { label: string }) {
   )
 }
 
-export default function Sidebar() {
+export default function Sidebar({
+  collapsed = false,
+  onToggle,
+}: {
+  collapsed?: boolean
+  onToggle?: () => void
+}) {
+  if (collapsed) {
+    return (
+      <aside className="flex h-[816px] shrink-0 items-start p-[16px]">
+        <div className="flex gap-[12px] items-center">
+          <button
+            type="button"
+            aria-label="展开侧边栏"
+            className="flex size-[24px] items-center justify-center"
+            onClick={onToggle}
+          >
+            <CollapseSvg className="size-[16px] shrink-0" />
+          </button>
+          <button
+            type="button"
+            aria-label="新建任务"
+            className="flex size-[24px] items-center justify-center"
+          >
+            <NewTaskSvg className="size-[16px] shrink-0" />
+          </button>
+        </div>
+      </aside>
+    )
+  }
+
   return (
     <aside className="flex h-[816px] w-[240px] shrink-0 flex-col items-start justify-between border-r-[0.5px] border-r-[var(--color-border-subtle)] bg-[rgba(0,0,0,0.02)] px-[8px]">
       <div className="w-full">
@@ -113,6 +143,7 @@ export default function Sidebar() {
             type="button"
             aria-label="折叠侧边栏"
             className="flex size-[24px] items-center justify-center"
+            onClick={onToggle}
           >
             <CollapseSvg className="size-[16px] shrink-0" />
           </button>

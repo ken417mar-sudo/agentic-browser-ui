@@ -18,6 +18,7 @@ const TABS = [
 
 export default function App() {
   const [activeTab, setActiveTab] = useState(1)
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
   const [hoveredTab, setHoveredTab] = useState<number | null>(null)
 
   return (
@@ -215,10 +216,18 @@ export default function App() {
       <p className="text-[var(--color-text-tertiary)] text-[12px] mt-10 mb-6">
         Sidebar — implement → verify
       </p>
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-[16px]">
         <div>
-          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">expanded / default-only (formal source board)</p>
-          <Sidebar />
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">expanded (click collapse button to toggle)</p>
+          <div className="flex bg-[var(--color-surface-window)] rounded-[12px] overflow-hidden">
+            <Sidebar collapsed={sidebarCollapsed} onToggle={() => setSidebarCollapsed(v => !v)} />
+          </div>
+        </div>
+        <div>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">collapsed (static)</p>
+          <div className="flex bg-[var(--color-surface-window)] rounded-[12px] overflow-hidden">
+            <Sidebar collapsed={true} />
+          </div>
         </div>
       </div>
 
