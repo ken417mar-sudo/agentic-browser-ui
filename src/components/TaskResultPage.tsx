@@ -2,6 +2,7 @@ import Sidebar from './Sidebar'
 import { InputBox } from './InputBox'
 import { Toolbar } from './Toolbar'
 import LoadingSvg from '../assets/figma/taskresult-loading@1x.svg?react'
+import StepLoadingSvg from '../assets/figma/taskresult-step-loading@1x.svg?react'
 import TaskStatusSvg from '../assets/figma/taskresult-task-status@1x.svg?react'
 import AnalysisCheckSvg from '../assets/figma/taskresult-analysis-check@1x.svg?react'
 import CollapseArrowSvg from '../assets/figma/taskresult-collapse-arrow@1x.svg?react'
@@ -26,7 +27,7 @@ function StepItem({
     <div className="flex flex-col items-start">
       <div className="flex gap-[12px] items-center w-full">
         <div className="flex size-[16px] shrink-0 items-center justify-center">
-          <LoadingSvg className="w-[30px] h-[6px] shrink-0" />
+          <StepLoadingSvg className="size-[16px] shrink-0" />
         </div>
         <span
           className="text-[14px] leading-[22px] text-[var(--color-text-secondary)]"
@@ -124,7 +125,7 @@ function AnalyzingIndicator() {
 
 export function TaskResultPage() {
   return (
-    <div className="flex h-[896px] w-[1600px] flex-col overflow-hidden rounded-[16px] bg-[var(--color-surface-app-bg)]">
+    <div className="flex h-[900px] w-[1600px] flex-col overflow-hidden rounded-[16px] bg-[var(--color-surface-app-bg)]">
       {/* TabBar placeholder */}
       <div className="flex h-[40px] w-full shrink-0 items-center bg-[var(--color-surface-app-bg)] px-[18px]">
         <div className="flex gap-[8px] items-center">
@@ -143,7 +144,7 @@ export function TaskResultPage() {
 
           {/* Main content */}
           <div className="flex flex-1 flex-col items-center overflow-y-auto px-[12px] py-[24px] gap-[16px]">
-            <div className="flex w-full max-w-[720px] flex-col gap-[36px]">
+            <div className="flex w-full max-w-[696px] flex-col gap-[36px]">
               {/* User bubble */}
               <div className="flex justify-end w-full">
                 <div
