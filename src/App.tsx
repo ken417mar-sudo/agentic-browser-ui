@@ -8,6 +8,7 @@ import Sidebar from './components/Sidebar'
 import { BrowserResultPage } from './components/BrowserResultPage'
 import WorkspacePage from './components/WorkspacePage'
 import { TaskResultPage } from './components/TaskResultPage'
+import { FileListCard } from './components/FileListCard'
 import dialogImagePlaceholder from './assets/figma/dialog-image-placeholder@1x.png'
 import './index.css'
 
@@ -273,6 +274,19 @@ export default function App() {
           <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">完成态（任务已完成 + 步骤全部打勾 + 结果摘要）</p>
           <div className="overflow-auto rounded-[16px]">
             <TaskResultPage completed />
+          </div>
+        </div>
+      </div>
+
+      {/* FileListCard verify card */}
+      <p className="text-[var(--color-text-tertiary)] text-[12px] mt-10 mb-6">
+        FileListCard — implement → verify
+      </p>
+      <div className="flex flex-col gap-6">
+        <div>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">展开态（标题栏 + 文件列表 6 items + 操作按钮）</p>
+          <div className="w-[720px]">
+            <FileListCard />
           </div>
         </div>
       </div>
