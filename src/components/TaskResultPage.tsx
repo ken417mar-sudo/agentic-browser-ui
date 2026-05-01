@@ -198,8 +198,8 @@ export function TaskResultPage({ completed = false }: { completed?: boolean }) {
                 {completed && (
                   <div className="flex flex-col gap-[16px] items-start w-full">
                     <p
-                      className="text-[24px] leading-[30px] font-bold text-[var(--color-text-primary)] w-full"
-                      style={{ fontFamily: "'HYQiHei:65S', 'PingFang SC', sans-serif" }}
+                      className="text-[20px] leading-[30px] text-[var(--color-text-primary)] w-full"
+                      style={{ fontFamily: "'HYQiHei:75S', 'PingFang SC', sans-serif" }}
                     >
                       清理任务已完成！
                     </p>
