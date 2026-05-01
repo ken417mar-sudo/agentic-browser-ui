@@ -184,17 +184,25 @@ export function TaskResultPage({ completed = false }: { completed?: boolean }) {
                 </div>
 
                 <div className="flex flex-col gap-[12px] items-start w-full">
-                  <p
-                    className="text-[16px] leading-[26px] text-[var(--color-text-primary)] w-full"
-                    style={{ fontFamily: "'PICO Sans VFE SC', 'PingFang SC', sans-serif" }}
-                  >
-                    好的，我将为您进行空间清理分析，请稍候。我会按照标准步骤流程检查并优化您的电脑。分析大文件占用情况，清理特定类型的文件
-                  </p>
+                  {!completed && (
+                    <p
+                      className="text-[16px] leading-[26px] text-[var(--color-text-primary)] w-full"
+                      style={{ fontFamily: "'PICO Sans VFE SC', 'PingFang SC', sans-serif" }}
+                    >
+                      好的，我将为您进行空间清理分析，请稍候。我会按照标准步骤流程检查并优化您的电脑。分析大文件占用情况，清理特定类型的文件
+                    </p>
+                  )}
                   {!completed && <AnalysisChip />}
                 </div>
 
                 {completed && (
                   <div className="flex flex-col gap-[16px] items-start w-full">
+                    <p
+                      className="text-[24px] leading-[30px] font-bold text-[var(--color-text-primary)] w-full"
+                      style={{ fontFamily: "'HYQiHei:65S', 'PingFang SC', sans-serif" }}
+                    >
+                      清理任务已完成！
+                    </p>
                     <p
                       className="text-[16px] leading-[26px] text-[var(--color-text-primary)] w-full"
                       style={{ fontFamily: "'PICO Sans VFE SC', 'PingFang SC', sans-serif" }}
@@ -205,7 +213,13 @@ export function TaskResultPage({ completed = false }: { completed?: boolean }) {
                       className="text-[16px] leading-[26px] text-[var(--color-text-primary)] w-full"
                       style={{ fontFamily: "'PICO Sans VFE SC', 'PingFang SC', sans-serif" }}
                     >
-                      如果您觉得C盘空间仍然紧张，或者想要进行更深度的清理，我可以帮您进一步操作。
+                      如果您觉得C盘空间仍然紧张，或者想要进行更深度的清理，我可以帮您：
+                    </p>
+                    <p
+                      className="text-[16px] leading-[26px] text-[var(--color-text-primary)] w-full"
+                      style={{ fontFamily: "'PICO Sans VFE SC', 'PingFang SC', sans-serif" }}
+                    >
+                      需要进一步的操作吗？
                     </p>
                   </div>
                 )}
