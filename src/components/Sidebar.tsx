@@ -1,5 +1,6 @@
 import type { ComponentType, SVGProps } from 'react'
 import CollapseSvg from '../assets/figma/sidebar-collapse@1x.svg?react'
+import SidebarToggleSvg from '../assets/figma/sidebar-toggle@1x.svg?react'
 import NewTaskSvg from '../assets/figma/sidebar-new-task@1x.svg?react'
 import AutoRunSvg from '../assets/figma/sidebar-auto-run@1x.svg?react'
 import SkillsSvg from '../assets/figma/sidebar-skills@1x.svg?react'
@@ -107,7 +108,7 @@ export default function Sidebar({
 }) {
   if (collapsed) {
     return (
-      <aside className="flex h-[816px] shrink-0 items-start p-[16px]">
+      <aside className="flex h-[816px] w-[240px] shrink-0 items-start p-[16px]">
         <div className="flex gap-[12px] items-center">
           <button
             type="button"
@@ -115,7 +116,7 @@ export default function Sidebar({
             className="flex size-[24px] items-center justify-center"
             onClick={onToggle}
           >
-            <CollapseSvg className="size-[16px] shrink-0" />
+            <SidebarToggleSvg className="size-[16px] shrink-0" />
           </button>
           <button
             type="button"
