@@ -24,7 +24,7 @@ export function AssistantSidebarChip({
       type="button"
       onClick={onClick}
       className={[
-        'flex h-[24px] items-center justify-center gap-[2px] overflow-hidden rounded-[99px] border-[0.5px] border-[rgba(31,98,238,0.2)] bg-[rgba(0,0,0,0.04)] pl-[4px] pr-[10px]',
+        'flex h-[24px] items-center justify-center gap-[2px] overflow-hidden rounded-[99px] outline outline-[0.5px] outline-[rgba(31,98,238,0.2)] bg-[rgba(0,0,0,0.04)] pl-[4px] pr-[10px]',
         className,
       ].join(' ')}
       aria-label="助手"
