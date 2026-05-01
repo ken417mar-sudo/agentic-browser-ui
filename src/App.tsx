@@ -269,6 +269,12 @@ export default function App() {
             <TaskResultPage />
           </div>
         </div>
+        <div>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">完成态（任务已完成 + 步骤全部打勾 + 结果摘要）</p>
+          <div className="overflow-auto rounded-[16px]">
+            <TaskResultPage completed />
+          </div>
+        </div>
       </div>
 
     </div>

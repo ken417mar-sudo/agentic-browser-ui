@@ -3,7 +3,9 @@ import { InputBox } from './InputBox'
 import { Toolbar } from './Toolbar'
 import LoadingSvg from '../assets/figma/taskresult-loading@1x.svg?react'
 import StepLoadingSvg from '../assets/figma/taskresult-step-loading@1x.svg?react'
+import StepDoneSvg from '../assets/figma/taskresult-step-done@1x.svg?react'
 import TaskStatusSvg from '../assets/figma/taskresult-task-status@1x.svg?react'
+import TaskDoneSvg from '../assets/figma/taskresult-task-done@1x.svg?react'
 import AnalysisCheckSvg from '../assets/figma/taskresult-analysis-check@1x.svg?react'
 import CollapseArrowSvg from '../assets/figma/taskresult-collapse-arrow@1x.svg?react'
 import StepConnectorSvg from '../assets/figma/taskresult-step-connector@1x.svg?react'
@@ -19,15 +21,20 @@ const STEPS = [
 function StepItem({
   label,
   isLast,
+  done,
 }: {
   label: string
   isLast: boolean
+  done: boolean
 }) {
   return (
     <div className="flex flex-col items-start">
       <div className="flex gap-[12px] items-center w-full">
-        <div className="flex size-[16px] shrink-0 items-center justify-center">
-          <StepLoadingSvg className="size-[16px] shrink-0" />
+        <div className="flex size-[16px] shrink-0 items-center justify-center relative">
+          <StepLoadingSvg className="size-[16px] shrink-0 absolute inset-0" />
+          {done && (
+            <StepDoneSvg className="w-[7.2px] h-[5.325px] shrink-0 relative z-10" />
+          )}
         </div>
         <span
           className="text-[14px] leading-[22px] text-[var(--color-text-secondary)]"
@@ -47,7 +54,7 @@ function StepItem({
   )
 }
 
-function ExecutionCard() {
+function ExecutionCard({ completed }: { completed: boolean }) {
   return (
     <div className="border-[0.5px] border-[var(--color-border-subtle)] flex flex-col items-start min-w-[356px] overflow-hidden rounded-[16px] w-full">
       <div className="border-b-[0.5px] border-b-[#e0e0e0] flex items-center justify-between pl-[12px] pr-[16px] py-[16px] w-full">
@@ -55,20 +62,24 @@ function ExecutionCard() {
           <div className="flex gap-[12px] h-[20px] items-center shrink-0">
             <div className="flex gap-[8px] items-center">
               <div className="flex size-[24px] items-center justify-center p-[4.571px] shrink-0">
-                <TaskStatusSvg className="size-[13px] shrink-0" />
+                {completed ? (
+                  <TaskDoneSvg className="size-[13px] shrink-0" />
+                ) : (
+                  <TaskStatusSvg className="size-[13px] shrink-0" />
+                )}
               </div>
               <span
                 className="text-[16px] leading-[26px] text-[var(--color-text-primary)] whitespace-nowrap"
                 style={{ fontFamily: "'HYQiHei:65S', 'PingFang SC', sans-serif" }}
               >
-                正在执行任务清单
+                {completed ? '任务已完成' : '正在执行任务清单'}
               </span>
             </div>
             <span
               className="text-[12px] leading-[16px] text-[#908ea8] overflow-hidden text-ellipsis whitespace-nowrap"
               style={{ fontFamily: "'HYQiHei:60S', 'PingFang SC', sans-serif" }}
             >
-              3/7已完成
+              {completed ? '5/5已完成' : '3/7已完成'}
             </span>
           </div>
           <button
@@ -86,6 +97,7 @@ function ExecutionCard() {
             key={step.label}
             label={step.label}
             isLast={i === STEPS.length - 1}
+            done={completed}
           />
         ))}
       </div>
@@ -123,7 +135,7 @@ function AnalyzingIndicator() {
   )
 }
 
-export function TaskResultPage() {
+export function TaskResultPage({ completed = false }: { completed?: boolean }) {
   return (
     <div className="flex h-[900px] w-[1600px] flex-col overflow-hidden rounded-[16px] bg-[var(--color-surface-app-bg)]">
       {/* TabBar placeholder */}
@@ -147,9 +159,7 @@ export function TaskResultPage() {
             <div className="flex w-full max-w-[696px] flex-col gap-[36px]">
               {/* User bubble */}
               <div className="flex justify-end w-full">
-                <div
-                  className="max-w-[450px] rounded-tl-[12px] rounded-tr-[12px] rounded-bl-[12px] rounded-br-[2px] bg-[#f1f2f3] px-[20px] py-[10px]"
-                >
+                <div className="max-w-[450px] rounded-tl-[12px] rounded-tr-[12px] rounded-bl-[12px] rounded-br-[2px] bg-[#f1f2f3] px-[20px] py-[10px]">
                   <p
                     className="text-[16px] leading-[26px] text-[var(--color-text-primary)]"
                     style={{ fontFamily: "'PICO Sans VFE SC', 'PingFang SC', sans-serif", fontFeatureSettings: "'ss01' 1, 'cv01' 1, 'cv11' 1" }}
@@ -161,7 +171,7 @@ export function TaskResultPage() {
 
               {/* Agent response area */}
               <div className="flex flex-col gap-[16px] items-start w-full">
-                <AnalyzingIndicator />
+                {!completed && <AnalyzingIndicator />}
 
                 <div className="flex flex-col gap-[16px] items-start w-full">
                   <p
@@ -170,18 +180,49 @@ export function TaskResultPage() {
                   >
                     根据扫描结果，分析具体的空间占用情况
                   </p>
-                  <ExecutionCard />
+                  <ExecutionCard completed={completed} />
                 </div>
 
                 <div className="flex flex-col gap-[12px] items-start w-full">
-                  <p
-                    className="text-[16px] leading-[26px] text-[var(--color-text-primary)] w-full"
-                    style={{ fontFamily: "'PICO Sans VFE SC', 'PingFang SC', sans-serif" }}
-                  >
-                    好的，我将为您进行空间清理分析，请稍候。我会按照标准步骤流程检查并优化您的电脑。分析大文件占用情况，清理特定类型的文件
-                  </p>
-                  <AnalysisChip />
+                  {!completed && (
+                    <p
+                      className="text-[16px] leading-[26px] text-[var(--color-text-primary)] w-full"
+                      style={{ fontFamily: "'PICO Sans VFE SC', 'PingFang SC', sans-serif" }}
+                    >
+                      好的，我将为您进行空间清理分析，请稍候。我会按照标准步骤流程检查并优化您的电脑。分析大文件占用情况，清理特定类型的文件
+                    </p>
+                  )}
+                  {!completed && <AnalysisChip />}
                 </div>
+
+                {completed && (
+                  <div className="flex flex-col gap-[16px] items-start w-full">
+                    <p
+                      className="text-[20px] leading-[30px] text-[var(--color-text-primary)] w-full"
+                      style={{ fontFamily: "'HYQiHei:75S', 'PingFang SC', sans-serif" }}
+                    >
+                      清理任务已完成！
+                    </p>
+                    <p
+                      className="text-[16px] leading-[26px] text-[var(--color-text-primary)] w-full"
+                      style={{ fontFamily: "'PICO Sans VFE SC', 'PingFang SC', sans-serif" }}
+                    >
+                      C盘清理已完成！成功清理了785项垃圾文件，释放了约207.3MB的磁盘空间。您的C盘目前有充足的可用空间（之前检查显示有239GB可用），这次清理虽然释放的空间不大，但已经清除了系统临时文件、缓存等不必要的文件。
+                    </p>
+                    <p
+                      className="text-[16px] leading-[26px] text-[var(--color-text-primary)] w-full"
+                      style={{ fontFamily: "'PICO Sans VFE SC', 'PingFang SC', sans-serif" }}
+                    >
+                      如果您觉得C盘空间仍然紧张，或者想要进行更深度的清理，我可以帮您：
+                    </p>
+                    <p
+                      className="text-[16px] leading-[26px] text-[var(--color-text-primary)] w-full"
+                      style={{ fontFamily: "'PICO Sans VFE SC', 'PingFang SC', sans-serif" }}
+                    >
+                      需要进一步的操作吗？
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
 
