@@ -61,9 +61,9 @@ export function FileListCard({
   onConfirm?: () => void
 }) {
   return (
-    <div className="bg-[#f9f9fa] border-[0.5px] border-[rgba(0,0,0,0.12)] flex flex-col items-start overflow-hidden rounded-[12px] w-full">
+    <div className="bg-[#f9f9fa] flex flex-col items-start overflow-hidden rounded-[12px] w-full outline outline-[0.5px] outline-[rgba(0,0,0,0.12)]">
       {/* 标题栏 */}
-      <div className="border-b border-b-[#eee] flex items-center justify-between pl-[12px] pr-[16px] py-[16px] w-full shrink-0">
+      <div className="flex items-center justify-between pl-[12px] pr-[16px] py-[16px] w-full shrink-0 shadow-[inset_0_-0.5px_0_#eee]">
         <div className="flex flex-1 items-center justify-between min-w-0">
           <div className="flex gap-[8px] items-center justify-center shrink-0">
             <TitleIconSvg className="size-[24px] shrink-0" />
@@ -94,7 +94,7 @@ export function FileListCard({
       </div>
 
       {/* 操作区 */}
-      <div className="border-t border-t-[#eee] flex items-center justify-between p-[16px] w-full shrink-0">
+      <div className="flex items-center justify-between p-[16px] w-full shrink-0 shadow-[inset_0_0.5px_0_#eee]">
         <div className="flex flex-1 items-center justify-between min-w-0">
           <button
             type="button"
