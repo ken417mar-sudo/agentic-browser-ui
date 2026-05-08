@@ -12,11 +12,10 @@ function NavOptionItem({ label, selected = false, onClick }: NavOptionItemProps)
       type="button"
       onClick={onClick}
       className={[
-        // 1.5px transparent border reserved in all states — no layout shift on selection change
-        'flex items-center px-[16px] py-[5px] rounded-[var(--radius-12)] whitespace-nowrap shrink-0 border-[0.5px]',
+        'flex items-center px-[16px] py-[5px] rounded-[var(--radius-12)] whitespace-nowrap shrink-0 outline outline-[0.5px]',
         selected
-          ? 'bg-[#18181b] text-white border-transparent'
-          : 'bg-[var(--color-surface-base)] border-[rgba(0,0,0,0.1)] text-[#18181b]',
+          ? 'bg-[#18181b] text-white outline-transparent'
+          : 'bg-[var(--color-surface-base)] outline-[rgba(0,0,0,0.1)] text-[#18181b]',
       ].join(' ')}
     >
       <span
@@ -37,7 +36,7 @@ function MoreButton({ onClick }: { onClick?: () => void }) {
     <button
       type="button"
       onClick={onClick}
-      className="flex h-[32px] items-center justify-center bg-[var(--color-surface-base)] border-[0.5px] border-[rgba(0,0,0,0.1)] px-[16px] py-[5px] rounded-[var(--radius-12)] shrink-0"
+      className="flex h-[32px] items-center justify-center bg-[var(--color-surface-base)] outline outline-[0.5px] outline-[rgba(0,0,0,0.1)] px-[16px] py-[5px] rounded-[var(--radius-12)] shrink-0"
       aria-label="更多"
     >
       <span className="flex flex-col items-center justify-center size-[18px] px-[1.5px]">
