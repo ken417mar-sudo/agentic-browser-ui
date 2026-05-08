@@ -9,6 +9,7 @@ import { BrowserResultPage } from './components/BrowserResultPage'
 import WorkspacePage from './components/WorkspacePage'
 import { TaskResultPage } from './components/TaskResultPage'
 import { FileListCard } from './components/FileListCard'
+import { NavigationMenu } from './components/NavigationMenu'
 import dialogImagePlaceholder from './assets/figma/dialog-image-placeholder@1x.png'
 import './index.css'
 
@@ -287,6 +288,31 @@ export default function App() {
           <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">展开态（标题栏 + 文件列表 6 items + 操作按钮）</p>
           <div className="w-[720px]">
             <FileListCard />
+          </div>
+        </div>
+      </div>
+
+      {/* NavigationMenu verify card */}
+      <p className="text-[var(--color-text-tertiary)] text-[12px] mt-10 mb-6">
+        NavigationMenu — implement → verify
+      </p>
+      <div className="flex flex-col gap-6">
+        <div>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">3 items, index 0 selected</p>
+          <div className="bg-[var(--color-surface-window)] rounded-[12px] p-4">
+            <NavigationMenu items={['推荐', '关注', '热榜']} selectedIndex={0} />
+          </div>
+        </div>
+        <div>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">5 items, index 2 selected</p>
+          <div className="bg-[var(--color-surface-window)] rounded-[12px] p-4">
+            <NavigationMenu items={['推荐', '关注', '热榜', '视频', '图片']} selectedIndex={2} />
+          </div>
+        </div>
+        <div>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">4 items + showMore</p>
+          <div className="bg-[var(--color-surface-window)] rounded-[12px] p-4">
+            <NavigationMenu items={['推荐', '关注', '热榜', '视频']} selectedIndex={0} showMore />
           </div>
         </div>
       </div>
