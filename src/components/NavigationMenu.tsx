@@ -1,5 +1,6 @@
 import MoreIconSvg from '../assets/figma/nav-more-icon@1x.svg?react'
 import ManageIconSvg from '../assets/figma/nav-manage-icon@1x.svg?react'
+import { SearchBar } from './SearchBar'
 
 interface NavOptionItemProps {
   label: string
@@ -74,9 +75,11 @@ export interface NavigationMenuProps {
   selectedIndex?: number
   showMore?: boolean
   showManage?: boolean
+  showSearch?: boolean
   onSelect?: (index: number) => void
   onMore?: () => void
   onManage?: () => void
+  onSearch?: (value: string) => void
   className?: string
 }
 
@@ -85,9 +88,11 @@ export function NavigationMenu({
   selectedIndex = 0,
   showMore = false,
   showManage = false,
+  showSearch = false,
   onSelect,
   onMore,
   onManage,
+  onSearch,
   className = '',
 }: NavigationMenuProps) {
   return (
@@ -103,7 +108,12 @@ export function NavigationMenu({
         ))}
         {showMore && <MoreButton onClick={onMore} />}
       </div>
-      {showManage && <ManageButton onClick={onManage} />}
+      <div className="flex items-center gap-[12px]">
+        {showSearch && (
+          <SearchBar className="w-[240px]" onChange={onSearch} />
+        )}
+        {showManage && <ManageButton onClick={onManage} />}
+      </div>
     </div>
   )
 }
