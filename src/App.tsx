@@ -10,6 +10,7 @@ import WorkspacePage from './components/WorkspacePage'
 import { TaskResultPage } from './components/TaskResultPage'
 import { FileListCard } from './components/FileListCard'
 import { NavigationMenu } from './components/NavigationMenu'
+import { SearchBar } from './components/SearchBar'
 import dialogImagePlaceholder from './assets/figma/dialog-image-placeholder@1x.png'
 import './index.css'
 
@@ -292,6 +293,25 @@ export default function App() {
         </div>
       </div>
 
+      {/* SearchBar verify card */}
+      <p className="text-[var(--color-text-tertiary)] text-[12px] mt-10 mb-6">
+        SearchBar — implement → verify (source: 2080:8086)
+      </p>
+      <div className="flex flex-col gap-6">
+        <div>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">default (empty, no clear button)</p>
+          <div className="bg-[var(--color-surface-window)] rounded-[12px] p-4">
+            <SearchBar className="w-[240px]" />
+          </div>
+        </div>
+        <div>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">with value (clear button visible)</p>
+          <div className="bg-[var(--color-surface-window)] rounded-[12px] p-4">
+            <SearchBar className="w-[240px]" value="字幕" />
+          </div>
+        </div>
+      </div>
+
       {/* NavigationMenu verify card */}
       <p className="text-[var(--color-text-tertiary)] text-[12px] mt-10 mb-6">
         NavigationMenu — implement → verify
@@ -331,6 +351,18 @@ export default function App() {
               showManage
               className="w-[1162px]"
             />
+          </div>
+        </div>
+        <div>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">3 items + showSearch (default/empty)</p>
+          <div className="bg-[var(--color-surface-window)] rounded-[12px] p-4 w-fit">
+            <NavigationMenu items={['推荐', '关注', '热榜']} selectedIndex={0} showSearch className="w-[1162px]" />
+          </div>
+        </div>
+        <div>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">3 items + showSearch + showManage (full right slot)</p>
+          <div className="bg-[var(--color-surface-window)] rounded-[12px] p-4 w-fit">
+            <NavigationMenu items={['推荐', '关注', '热榜']} selectedIndex={0} showSearch showManage className="w-[1162px]" />
           </div>
         </div>
       </div>
