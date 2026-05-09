@@ -11,6 +11,7 @@ import { TaskResultPage } from './components/TaskResultPage'
 import { FileListCard } from './components/FileListCard'
 import { NavigationMenu } from './components/NavigationMenu'
 import { SearchBar } from './components/SearchBar'
+import { ModelCard } from './components/ModelCard'
 import dialogImagePlaceholder from './assets/figma/dialog-image-placeholder@1x.png'
 import './index.css'
 
@@ -310,6 +311,19 @@ export default function App() {
             <SearchBar className="w-[240px]" value="字幕" />
           </div>
         </div>
+      </div>
+
+      {/* ModelCard verify card */}
+      <p className="text-[var(--color-text-tertiary)] text-[12px] mt-10 mb-6">
+        ModelCard — implement → verify (source: 2080:40042/40051/40064/40079)
+      </p>
+      <div className="grid grid-cols-2 gap-x-8 gap-y-6 w-fit">
+        {(['normal', 'hover', 'loading', 'selected'] as const).map(state => (
+          <div key={state}>
+            <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">所属模块=模型广场 状态={state}</p>
+            <ModelCard state={state} />
+          </div>
+        ))}
       </div>
 
       {/* NavigationMenu verify card */}
