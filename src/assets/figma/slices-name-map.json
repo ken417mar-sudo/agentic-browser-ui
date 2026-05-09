@@ -112,5 +112,11 @@
     "original": "loading",
     "english": "analysisstatusrow-loading",
     "files": ["analysisstatusrow-loading@1x.svg"]
+  },
+  {
+    "id": "I2080:42259;2080:42340;2080:43480",
+    "original": "icon/设置（大）",
+    "english": "nav-manage-icon",
+    "files": ["nav-manage-icon@1x.svg"]
   }
 ]

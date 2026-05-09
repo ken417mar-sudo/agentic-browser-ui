@@ -315,6 +315,24 @@ export default function App() {
             <NavigationMenu items={['推荐', '关注', '热榜', '视频']} selectedIndex={0} showMore />
           </div>
         </div>
+        <div>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">3 items + showManage</p>
+          <div className="bg-[var(--color-surface-window)] rounded-[12px] p-4 w-fit">
+            <NavigationMenu items={['推荐', '关注', '热榜']} selectedIndex={0} showManage className="w-[1162px]" />
+          </div>
+        </div>
+        <div>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">10 items + showMore + showManage</p>
+          <div className="bg-[var(--color-surface-window)] rounded-[12px] p-4 w-fit">
+            <NavigationMenu
+              items={['推荐', '关注', '热榜', '视频', '图片', '直播', '音乐', '科技', '财经', '体育']}
+              selectedIndex={0}
+              showMore
+              showManage
+              className="w-[1162px]"
+            />
+          </div>
+        </div>
       </div>
 
     </div>

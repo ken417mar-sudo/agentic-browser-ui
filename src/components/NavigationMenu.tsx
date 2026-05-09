@@ -1,4 +1,5 @@
 import MoreIconSvg from '../assets/figma/nav-more-icon@1x.svg?react'
+import ManageIconSvg from '../assets/figma/nav-manage-icon@1x.svg?react'
 
 interface NavOptionItemProps {
   label: string
@@ -46,12 +47,36 @@ function MoreButton({ onClick }: { onClick?: () => void }) {
   )
 }
 
+function ManageButton({ onClick }: { onClick?: () => void }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className="flex h-[32px] items-center justify-center gap-[4px] bg-[var(--color-surface-base)] outline outline-[0.5px] outline-[rgba(0,0,0,0.1)] px-[16px] py-[5px] rounded-[var(--radius-12)] shrink-0 text-[#18181b]"
+      aria-label="管理"
+    >
+      <ManageIconSvg className="size-[18px] shrink-0" />
+      <span
+        className="text-[14px] leading-[22px] whitespace-nowrap"
+        style={{
+          fontFamily: "'HYQiHei:60S', 'PingFang SC', sans-serif",
+          fontFeatureSettings: "'ss01' 1, 'cv01' 1, 'cv11' 1",
+        }}
+      >
+        管理
+      </span>
+    </button>
+  )
+}
+
 export interface NavigationMenuProps {
   items: string[]
   selectedIndex?: number
   showMore?: boolean
+  showManage?: boolean
   onSelect?: (index: number) => void
   onMore?: () => void
+  onManage?: () => void
   className?: string
 }
 
@@ -59,8 +84,10 @@ export function NavigationMenu({
   items,
   selectedIndex = 0,
   showMore = false,
+  showManage = false,
   onSelect,
   onMore,
+  onManage,
   className = '',
 }: NavigationMenuProps) {
   return (
@@ -76,6 +103,7 @@ export function NavigationMenu({
         ))}
         {showMore && <MoreButton onClick={onMore} />}
       </div>
+      {showManage && <ManageButton onClick={onManage} />}
     </div>
   )
 }
