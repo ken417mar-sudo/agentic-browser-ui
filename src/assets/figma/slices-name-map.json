@@ -136,5 +136,33 @@
     "original": "蒙版",
     "english": "modelcard-loading-progress",
     "files": ["modelcard-loading-progress@1x.svg"]
+  },
+  {
+    "id": "2080:3949",
+    "original": "Icon (Stroke) / 前进箭头",
+    "english": "topbar-nav-arrow",
+    "files": ["topbar-nav-arrow@1x.svg"],
+    "note": "Used for both back (rotate 180deg) and forward nav buttons in TopTabBar"
+  },
+  {
+    "id": "1020:11765",
+    "original": "icon/首页",
+    "english": "topbar-home",
+    "files": ["topbar-home@1x.svg"],
+    "note": "Frame-preserving normalization: 18x18 canvas with Union (1020:11766, 12.16x14.33) translated to inset position (left=2.92 top=1.84) matching Figma frame inset ~16.22% h / ~10.2% v. Uses currentColor fill."
+  },
+  {
+    "id": "6198:451788",
+    "original": "icon/设置（大）",
+    "english": "topbar-settings",
+    "files": ["topbar-settings@1x.svg"],
+    "note": "Manually composed from two child paths: gear outline (6198:451788;1165:58472) + center circle (6198:451788;1165:58473). Uses currentColor stroke."
+  },
+  {
+    "id": "I2080:8062;1122:12338;1494:53862",
+    "original": "Apps logo",
+    "english": "topbar-apps-logo",
+    "files": ["topbar-apps-logo@1x.png"],
+    "note": "PNG 36x36, rendered at 18x18 in TopTabBar third tab slot"
   }
 ]

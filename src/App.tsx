@@ -12,6 +12,7 @@ import { FileListCard } from './components/FileListCard'
 import { NavigationMenu } from './components/NavigationMenu'
 import { SearchBar } from './components/SearchBar'
 import { ModelCard } from './components/ModelCard'
+import TopTabBar from './components/TopTabBar'
 import dialogImagePlaceholder from './assets/figma/dialog-image-placeholder@1x.png'
 import './index.css'
 
@@ -311,6 +312,18 @@ export default function App() {
             <SearchBar className="w-[240px]" value="字幕" />
           </div>
         </div>
+      </div>
+
+      {/* TopTabBar verify card */}
+      <p className="text-[var(--color-text-tertiary)] text-[12px] mt-10 mb-6">
+        TopTabBar — operation + tab-strip slice (source: 2080:8062, home-selected state; global actions deferred)
+      </p>
+      <div className="bg-[var(--color-surface-window)] rounded-[12px] overflow-hidden" style={{ width: 1166 }}>
+        <TopTabBar
+          selectedTabId="home"
+          canGoBack={false}
+          canGoForward={true}
+        />
       </div>
 
       {/* ModelCard verify card */}
