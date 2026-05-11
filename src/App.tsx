@@ -306,7 +306,7 @@ export default function App() {
           </div>
         </div>
         <div>
-          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">with value (clear button visible)</p>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">focused with value (clear button visible)</p>
           <div className="bg-[var(--color-surface-window)] rounded-[12px] p-4">
             <SearchBar className="w-[240px]" value="字幕" />
           </div>

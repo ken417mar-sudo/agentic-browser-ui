@@ -37,14 +37,14 @@ export function SearchBar({
   return (
     <div
       className={[
-        'flex items-center gap-[8px] h-[32px] px-[8px] rounded-[12px]',
+        'flex items-center h-[32px] px-[8px] rounded-[12px]',
         'border-[1.5px] border-[rgba(51,51,51,0.12)]',
         'bg-white shadow-[0px_0px_20px_rgba(0,0,0,0.06)]',
         'focus-within:border-[rgba(51,51,51,0.9)]',
         className,
       ].join(' ')}
     >
-      <SearchIconSvg className="size-[18px] shrink-0 text-[rgba(0,0,0,0.4)]" />
+      <SearchIconSvg className="mr-[6px] size-[18px] shrink-0 text-[rgba(0,0,0,0.4)]" />
       <input
         ref={inputRef}
         type="text"
@@ -53,7 +53,7 @@ export function SearchBar({
         placeholder={placeholder}
         className={[
           'flex-1 min-w-0 bg-transparent outline-none',
-          'text-[14px] leading-[22px] text-[#1f2329]',
+          'text-[14px] leading-[22px] text-black caret-[#1f2329]',
           'placeholder:text-[rgba(0,0,0,0.3)]',
         ].join(' ')}
         style={{
@@ -66,7 +66,7 @@ export function SearchBar({
           type="button"
           onClick={handleClear}
           aria-label="清除搜索"
-          className="flex items-center justify-center size-[18px] shrink-0 text-[rgba(0,0,0,0.4)] hover:text-[rgba(0,0,0,0.7)]"
+          className="ml-[8px] flex size-[18px] shrink-0 items-center justify-center text-[rgba(0,0,0,0.4)] hover:text-[rgba(0,0,0,0.7)]"
         >
           <ClearIconSvg className="size-[18px]" />
         </button>
