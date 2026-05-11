@@ -118,5 +118,23 @@
     "original": "icon/设置（大）",
     "english": "nav-manage-icon",
     "files": ["nav-manage-icon@1x.svg"]
+  },
+  {
+    "id": "I2080:40046;2080:44089",
+    "original": "icon/DeepSeek / Vector",
+    "english": "modelcard-deepseek-vector",
+    "files": ["modelcard-deepseek-vector@1x.svg"]
+  },
+  {
+    "id": "I2080:40046;2080:44090",
+    "original": "icon/DeepSeek / Vector",
+    "english": "modelcard-deepseek-vector-inner",
+    "files": ["modelcard-deepseek-vector-inner@1x.svg"]
+  },
+  {
+    "id": "2080:40077",
+    "original": "蒙版",
+    "english": "modelcard-loading-progress",
+    "files": ["modelcard-loading-progress@1x.svg"]
   }
 ]
