@@ -1,4 +1,3 @@
-import deepseekVector from '../assets/figma/modelcard-deepseek-vector@1x.svg'
 import deepseekVectorInner from '../assets/figma/modelcard-deepseek-vector-inner@1x.svg'
 import loadingProgress from '../assets/figma/modelcard-loading-progress@1x.svg'
 
@@ -17,18 +16,9 @@ const baseTextStyle = {
 
 function DeepSeekIcon() {
   return (
-    <span className="flex items-center p-[1.5px] rounded-[6px] shrink-0">
-      <span className="relative block size-[13.5px] overflow-hidden">
-        <img
-          alt=""
-          src={deepseekVector}
-          className="absolute left-1/2 top-1/2 size-[12px] -translate-x-1/2 -translate-y-1/2"
-        />
-        <img
-          alt=""
-          src={deepseekVectorInner}
-          className="absolute left-[calc(50%+0.03px)] top-[calc(50%+0.33px)] h-[6.667px] w-[9.063px] -translate-x-1/2 -translate-y-1/2"
-        />
+    <span className="flex size-[20px] shrink-0 items-center justify-center">
+      <span className="relative block h-[13.25px] w-[18px] overflow-hidden">
+        <img alt="" src={deepseekVectorInner} className="absolute inset-0 size-full" />
       </span>
     </span>
   )
