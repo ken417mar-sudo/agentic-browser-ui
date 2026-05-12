@@ -164,5 +164,61 @@
     "english": "topbar-apps-logo",
     "files": ["topbar-apps-logo@1x.png"],
     "note": "PNG 36x36, rendered at 18x18 in TopTabBar third tab slot"
+  },
+  {
+    "id": "2080:3962",
+    "original": "icon_btn/新版本 / Frame",
+    "english": "topbar-version-icon",
+    "files": ["topbar-version-icon@1x.svg"],
+    "note": "16x16 frame icon inside 新版本 pill; rendered rotate(180deg) in component"
+  },
+  {
+    "id": "2080:3975",
+    "original": "gift-box 1",
+    "english": "topbar-gift-icon",
+    "files": ["topbar-gift-icon@1x.svg"],
+    "note": "Manually composed from 4 gradient layers (nodes 2080:3978/3980/3982/3984) into 11.667x10.5 canvas. All layers use white gradient fills for rendering on gradient pill background."
+  },
+  {
+    "id": "2080:4007",
+    "original": "icon_user",
+    "english": "topbar-user-icon",
+    "files": ["topbar-user-icon@1x.svg"],
+    "note": "20x20 user avatar icon inside user chip"
+  },
+  {
+    "id": "1020:12026",
+    "original": "icon/展开（小）/ 多边形",
+    "english": "topbar-expand-icon",
+    "files": ["topbar-expand-icon@1x.svg"],
+    "note": "6x3.5 chevron polygon inside user chip expand indicator"
+  },
+  {
+    "id": "2080:4030",
+    "original": "icon_btn/未置顶 / Frame",
+    "english": "topbar-pin-icon",
+    "files": ["topbar-pin-icon@1x.svg"],
+    "note": "16x16 pin icon in window control area"
+  },
+  {
+    "id": "2080:4034",
+    "original": "icon_btn/最小化 / Union",
+    "english": "topbar-minimize-icon",
+    "files": ["topbar-minimize-icon@1x.svg"],
+    "note": "14x1.4 minimize line in window control area"
+  },
+  {
+    "id": "I2080:8062;1122:12560;1122:61677",
+    "original": "icon_btn/最大化 / Group",
+    "english": "topbar-maximize-icon",
+    "files": ["topbar-maximize-icon@1x.svg"],
+    "note": "12x12 maximize icon in window control area"
+  },
+  {
+    "id": "2080:3943",
+    "original": "icon_btn/关闭/默认 / Vector (Stroke)",
+    "english": "topbar-close-icon",
+    "files": ["topbar-close-icon@1x.svg"],
+    "note": "10.4x10.4 close X icon in window control area"
   }
 ]

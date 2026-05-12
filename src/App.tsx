@@ -316,13 +316,25 @@ export default function App() {
 
       {/* TopTabBar verify card */}
       <p className="text-[var(--color-text-tertiary)] text-[12px] mt-10 mb-6">
-        TopTabBar — operation + tab-strip slice (source: 2080:8062, home-selected state; global actions deferred)
+        TopTabBar — full bar (source: 2080:8062, home-selected state)
       </p>
       <div className="bg-[var(--color-surface-window)] rounded-[12px] overflow-hidden" style={{ width: 1166 }}>
         <TopTabBar
           selectedTabId="home"
           canGoBack={false}
           canGoForward={true}
+          showGlobalActions={true}
+        />
+      </div>
+      <p className="text-[var(--color-text-tertiary)] text-[12px] mt-4 mb-2">
+        TopTabBar — operation + tab-strip only (showGlobalActions=false)
+      </p>
+      <div className="bg-[var(--color-surface-window)] rounded-[12px] overflow-hidden" style={{ width: 1166 }}>
+        <TopTabBar
+          selectedTabId="home"
+          canGoBack={false}
+          canGoForward={true}
+          showGlobalActions={false}
         />
       </div>
 
