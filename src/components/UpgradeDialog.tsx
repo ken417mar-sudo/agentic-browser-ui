@@ -35,8 +35,8 @@ export default function UpgradeDialog({
 
   return (
     <div
-      className="bg-white border border-black rounded-[16px] overflow-hidden pb-[24px] px-[24px]"
-      style={{ width: 310 }}
+      className="bg-white outline outline-1 outline-black rounded-[16px] overflow-hidden pb-[24px] px-[24px]"
+      style={{ width: 310, height: 216 }}
     >
       {/* content area */}
       <div className="flex flex-col gap-[6px]" style={{ height: 192 }}>
@@ -50,7 +50,7 @@ export default function UpgradeDialog({
         {/* 下载进度 */}
         <div className="flex flex-col gap-[8px] shrink-0" style={{ height: 32 }}>
           <div
-            className="flex items-center justify-between text-[14px] whitespace-nowrap"
+            className="flex items-center justify-between text-[14px] whitespace-nowrap h-[16px] shrink-0"
             style={{ fontFamily: "'HYQiHei:60S', 'PingFang SC', sans-serif" }}
           >
             <span className="text-[#18181b] leading-[16px]">正在升级中</span>
