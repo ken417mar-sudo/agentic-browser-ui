@@ -13,6 +13,7 @@ import { NavigationMenu } from './components/NavigationMenu'
 import { SearchBar } from './components/SearchBar'
 import { ModelCard } from './components/ModelCard'
 import TopTabBar from './components/TopTabBar'
+import UpgradeDialog from './components/UpgradeDialog'
 import dialogImagePlaceholder from './assets/figma/dialog-image-placeholder@1x.png'
 import './index.css'
 
@@ -311,6 +312,25 @@ export default function App() {
           <div className="bg-[var(--color-surface-window)] rounded-[12px] p-4">
             <SearchBar className="w-[240px]" value="字幕" />
           </div>
+        </div>
+      </div>
+
+      {/* UpgradeDialog verify card */}
+      <p className="text-[var(--color-text-tertiary)] text-[12px] mt-10 mb-6">
+        UpgradeDialog — downloading state (source: 2080:7977)
+      </p>
+      <div className="flex gap-[16px] flex-wrap">
+        <div>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">progress=75 (Figma source)</p>
+          <UpgradeDialog progress={75} />
+        </div>
+        <div>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">progress=30</p>
+          <UpgradeDialog progress={30} />
+        </div>
+        <div>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">progress=100</p>
+          <UpgradeDialog progress={100} />
         </div>
       </div>
 
