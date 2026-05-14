@@ -220,5 +220,40 @@
     "english": "topbar-close-icon",
     "files": ["topbar-close-icon@1x.svg"],
     "note": "10.4x10.4 close X icon in window control area"
+  },
+  {
+    "id": "I2080:40409;2080:45260",
+    "original": "升级弹窗 / logo Group",
+    "english": "upgrade-logo",
+    "files": ["upgrade-logo@1x.svg"],
+    "note": "App logo used in 升级中 (96x96 slot) and 升级前 (40x40 slot). viewBox 34.76x34.99, rendered at slot size."
+  },
+  {
+    "id": "2080:40429",
+    "original": "升级失败 / 椭圆形",
+    "english": "upgrade-fail-circle",
+    "files": ["upgrade-fail-circle@1x.svg"],
+    "note": "60x60 circle background for 升级失败 warning icon"
+  },
+  {
+    "id": "2080:40433",
+    "original": "升级失败 / Vector (警示三角)",
+    "english": "upgrade-fail-triangle",
+    "files": ["upgrade-fail-triangle@1x.svg"],
+    "note": "Warning triangle inside 升级失败 icon, 49x42 viewBox, rendered in 53x53 slot"
+  },
+  {
+    "id": "2080:40434",
+    "original": "升级失败 / 感叹号",
+    "english": "upgrade-fail-exclaim",
+    "files": ["upgrade-fail-exclaim@1x.svg"],
+    "note": "Exclamation mark inside warning triangle, 7.47x21.11 viewBox"
+  },
+  {
+    "id": "2080:40368",
+    "original": "升级前 / 版本号 logo (mask group)",
+    "english": "upgrade-version-logo",
+    "files": ["upgrade-version-logo@1x.svg"],
+    "note": "Product name logo in 升级前 version row, 137.9x14 viewBox"
   }
 ]
