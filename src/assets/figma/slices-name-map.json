@@ -255,5 +255,12 @@
     "english": "upgrade-version-logo",
     "files": ["upgrade-version-logo@1x.svg"],
     "note": "Product name logo in 升级前 version row, 137.9x14 viewBox"
+  },
+  {
+    "id": "2080:40365",
+    "original": "升级前 / 版本号 logo mask",
+    "english": "upgrade-version-logo-mask",
+    "files": ["upgrade-version-logo-mask@1x.svg"],
+    "note": "Mask layer for version logo. Figma uses mask-alpha effect. Deferred: current implementation renders upgrade-version-logo directly without mask."
   }
 ]

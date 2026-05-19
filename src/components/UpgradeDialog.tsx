@@ -35,10 +35,7 @@ interface UpgradeDialogProps {
   showRestartReady?: boolean  // 升级前: "最新版本已准备好，重启后即可使用"
   showDownloadProgress?: boolean  // 升级前: 下载进度条
   downloadProgress?: number
-  showRestartButton?: boolean
-  showUpdateButton?: boolean
   onRestart?: () => void
-  onUpdate?: () => void
   onRetry?: () => void
 }
 
@@ -50,10 +47,7 @@ export default function UpgradeDialog({
   showRestartReady = true,
   showDownloadProgress = false,
   downloadProgress = 30,
-  showRestartButton = true,
-  showUpdateButton = true,
   onRestart,
-  onUpdate,
   onRetry,
 }: UpgradeDialogProps) {
   const resolvedLabel = progressLabel ?? `${Math.round(progress)}%`
@@ -143,36 +137,20 @@ export default function UpgradeDialog({
             </div>
           )}
 
-          {/* button group */}
+          {/* button group — Figma shows single 重启应用 button */}
           <div className="flex gap-[8px] items-start shrink-0 w-full">
-            {showUpdateButton && (
-              <button
-                type="button"
-                onClick={onUpdate}
-                className="flex flex-1 h-[32px] items-center justify-center rounded-[8px] bg-black"
+            <button
+              type="button"
+              onClick={onRestart}
+              className="flex flex-1 h-[32px] items-center justify-center rounded-[8px] bg-black"
+            >
+              <span
+                className="text-[13px] leading-[20px] text-white"
+                style={{ fontFamily: "'HYQiHei:60S', 'PingFang SC', sans-serif" }}
               >
-                <span
-                  className="text-[13px] leading-[20px] text-white"
-                  style={{ fontFamily: "'HYQiHei:60S', 'PingFang SC', sans-serif" }}
-                >
-                  重启应用
-                </span>
-              </button>
-            )}
-            {showRestartButton && !showUpdateButton && (
-              <button
-                type="button"
-                onClick={onRestart}
-                className="flex flex-1 h-[32px] items-center justify-center rounded-[8px] bg-black"
-              >
-                <span
-                  className="text-[13px] leading-[20px] text-white"
-                  style={{ fontFamily: "'HYQiHei:60S', 'PingFang SC', sans-serif" }}
-                >
-                  重启应用
-                </span>
-              </button>
-            )}
+                重启应用
+              </span>
+            </button>
           </div>
         </>
       )}
