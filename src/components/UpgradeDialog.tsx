@@ -57,6 +57,8 @@ export default function UpgradeDialog({
   const is升级失败 = state === '升级失败'
 
   const rootH = is升级前 ? 356 : 222
+  const rootRadius = is升级前 ? 16 : 12
+  const rootPt = is升级前 ? 0 : 6
 
   return (
     <div
@@ -64,10 +66,10 @@ export default function UpgradeDialog({
       style={{
         width: 320,
         height: rootH,
-        borderRadius: 12,
+        borderRadius: rootRadius,
+        paddingTop: rootPt,
         border: '0.5px solid rgba(0,0,0,0.08)',
         boxShadow: '0px 4px 30px 0px rgba(0,0,0,0.1)',
-        gap: is升级前 ? undefined : 0,
         justifyContent: is升级前 ? 'space-between' : undefined,
       }}
     >
