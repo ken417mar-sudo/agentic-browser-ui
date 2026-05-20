@@ -317,20 +317,24 @@ export default function App() {
 
       {/* UpgradeDialog verify card */}
       <p className="text-[var(--color-text-tertiary)] text-[12px] mt-10 mb-6">
-        UpgradeDialog — downloading state (source: 2080:7977)
+        UpgradeDialog — all 4 variants (source: 2080:40359, 联想规范)
       </p>
-      <div className="flex gap-[16px] flex-wrap">
+      <div className="flex gap-[16px] flex-wrap items-start">
         <div>
-          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">progress=75 (Figma source)</p>
-          <UpgradeDialog progress={75} />
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">升级前 (320×356)</p>
+          <UpgradeDialog state="升级前" />
         </div>
         <div>
-          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">progress=30</p>
-          <UpgradeDialog progress={30} />
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">升级中 progress=75 (320×222)</p>
+          <UpgradeDialog state="升级中" progress={75} />
         </div>
         <div>
-          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">progress=100</p>
-          <UpgradeDialog progress={100} />
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">升级成功 (320×222, inferred)</p>
+          <UpgradeDialog state="升级成功" />
+        </div>
+        <div>
+          <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">升级失败 (320×222)</p>
+          <UpgradeDialog state="升级失败" />
         </div>
       </div>
 
