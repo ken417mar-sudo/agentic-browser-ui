@@ -15,6 +15,8 @@ import { ModelCard } from './components/ModelCard'
 import TopTabBar from './components/TopTabBar'
 import UpgradeDialog from './components/UpgradeDialog'
 import { BookmarkItem } from './components/BookmarkItem'
+import bookmarkAirbnbApp from './assets/figma/bookmark-airbnb-app@1x.png'
+import bookmarkDisneyApp from './assets/figma/bookmark-disney-app@1x.png'
 import dialogImagePlaceholder from './assets/figma/dialog-image-placeholder@1x.png'
 import './index.css'
 
@@ -344,12 +346,12 @@ export default function App() {
         BookmarkItem — bookmark bar chip (source: 1708:30231~30233, 24px height)
       </p>
       <div className="flex items-center gap-[8px] bg-[var(--color-surface-window)] rounded-[8px] px-[8px] py-[4px]">
-        {/* Collection: generic star icon — verified 83.71×24 */}
+        {/* Collection: generic star icon — source 1708:30233 */}
         <BookmarkItem label="Collection" />
-        {/* Airbnb/Disney+: app favicon slots — props structurally correct;
-            real favicon assets not exported yet (Figma 1708:30231/30232 hidden) */}
-        <BookmarkItem label="Airbnb" appIconBg="#ff0057" appIconRadius="8px" />
-        <BookmarkItem label="Disney +" appIconBg="#06062a" appIconRadius="60px" />
+        {/* Airbnb: app favicon — source 1708:30231, bg #ff0057, rounded-8 */}
+        <BookmarkItem label="Airbnb" appIconSrc={bookmarkAirbnbApp} appIconBg="#ff0057" appIconRadius="8px" />
+        {/* Disney+: app favicon — source 1708:30232, bg #06062a, rounded-60 */}
+        <BookmarkItem label="Disney +" appIconSrc={bookmarkDisneyApp} appIconBg="#06062a" appIconRadius="60px" />
       </div>
 
       {/* TopTabBar verify card */}

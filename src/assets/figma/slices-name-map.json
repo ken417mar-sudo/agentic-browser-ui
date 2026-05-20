@@ -3,264 +3,364 @@
     "id": "1714:1013",
     "original": "close-off",
     "english": "close-off",
-    "files": ["close-off@1x.svg"]
+    "files": [
+      "close-off@1x.svg"
+    ]
   },
   {
     "id": "1714:1017",
     "original": "close-on",
     "english": "close-on",
-    "files": ["close-on@1x.svg"]
+    "files": [
+      "close-on@1x.svg"
+    ]
   },
   {
     "id": "I1708:30180;1721:11439",
     "original": "切图/图标/视频",
     "english": "aitoolsrow-video",
-    "files": ["aitoolsrow-video@1x.svg"]
+    "files": [
+      "aitoolsrow-video@1x.svg"
+    ]
   },
   {
     "id": "I1708:30180;1721:11444",
     "original": "切图/图标/定时任务",
     "english": "aitoolsrow-schedule",
-    "files": ["aitoolsrow-schedule@1x.svg"]
+    "files": [
+      "aitoolsrow-schedule@1x.svg"
+    ]
   },
   {
     "id": "I1708:30180;1721:11451",
     "original": "切图/图标/技能",
     "english": "aitoolsrow-skill",
-    "files": ["aitoolsrow-skill@1x.svg"]
+    "files": [
+      "aitoolsrow-skill@1x.svg"
+    ]
   },
   {
     "id": "I1708:30180;1721:11458",
     "original": "切图/图标/知识库",
     "english": "aitoolsrow-knowledge",
-    "files": ["aitoolsrow-knowledge@1x.svg"]
+    "files": [
+      "aitoolsrow-knowledge@1x.svg"
+    ]
   },
   {
     "id": "I1708:30180;1708:30403",
     "original": "切图/图标/更多",
     "english": "aitoolsrow-more",
-    "files": ["aitoolsrow-more@1x.svg"]
+    "files": [
+      "aitoolsrow-more@1x.svg"
+    ]
   },
   {
     "id": "1708:30289",
     "original": "历史记录",
     "english": "assistant-title-history",
-    "files": ["assistant-title-history@1x.svg"]
+    "files": [
+      "assistant-title-history@1x.svg"
+    ]
   },
   {
     "id": "2025:11957",
     "original": "电脑",
     "english": "workspacetoolbar-desktop",
-    "files": ["workspacetoolbar-desktop@1x.svg"]
+    "files": [
+      "workspacetoolbar-desktop@1x.svg"
+    ]
   },
   {
     "id": "2025:11962",
     "original": "手机",
     "english": "workspacetoolbar-mobile",
-    "files": ["workspacetoolbar-mobile@1x.svg"]
+    "files": [
+      "workspacetoolbar-mobile@1x.svg"
+    ]
   },
   {
     "id": "2025:11966",
     "original": "自定义",
     "english": "workspacetoolbar-custom",
-    "files": ["workspacetoolbar-custom@1x.svg"]
+    "files": [
+      "workspacetoolbar-custom@1x.svg"
+    ]
   },
   {
     "id": "2025:11974",
     "original": "分割线",
     "english": "workspacetoolbar-divider",
-    "files": ["workspacetoolbar-divider@1x.svg"]
+    "files": [
+      "workspacetoolbar-divider@1x.svg"
+    ]
   },
   {
     "id": "2025:11978",
     "original": "书签",
     "english": "workspacetoolbar-bookmark",
-    "files": ["workspacetoolbar-bookmark@1x.svg"]
+    "files": [
+      "workspacetoolbar-bookmark@1x.svg"
+    ]
   },
   {
     "id": "I2025:11978;490:39631",
     "original": "icon",
     "english": "workspacetoolbar-bookmark-inner",
-    "files": ["workspacetoolbar-bookmark-inner@1x.svg"]
+    "files": [
+      "workspacetoolbar-bookmark-inner@1x.svg"
+    ]
   },
   {
     "id": "2025:11984",
     "original": "More",
     "english": "workspacetoolbar-more",
-    "files": ["workspacetoolbar-more@1x.svg"]
+    "files": [
+      "workspacetoolbar-more@1x.svg"
+    ]
   },
   {
     "id": "2025:12090",
     "original": "图标",
     "english": "taskchatpanel-expand",
-    "files": ["taskchatpanel-expand@1x.svg"]
+    "files": [
+      "taskchatpanel-expand@1x.svg"
+    ]
   },
   {
     "id": "2025:12265",
     "original": "分析类目",
     "english": "analysischip",
-    "files": ["analysischip@1x.svg"]
+    "files": [
+      "analysischip@1x.svg"
+    ]
   },
   {
     "id": "I2025:12265;994:48282",
     "original": "Check-one (校验)",
     "english": "analysischip-check",
-    "files": ["analysischip-check@1x.svg"]
+    "files": [
+      "analysischip-check@1x.svg"
+    ]
   },
   {
     "id": "1708:29717",
     "original": "loading",
     "english": "analysisstatusrow-loading",
-    "files": ["analysisstatusrow-loading@1x.svg"]
+    "files": [
+      "analysisstatusrow-loading@1x.svg"
+    ]
   },
   {
     "id": "I2080:42259;2080:42340;2080:43480",
     "original": "icon/设置（大）",
     "english": "nav-manage-icon",
-    "files": ["nav-manage-icon@1x.svg"]
+    "files": [
+      "nav-manage-icon@1x.svg"
+    ]
   },
   {
     "id": "I2080:40046;2080:44089",
     "original": "icon/DeepSeek / Vector",
     "english": "modelcard-deepseek-vector",
-    "files": ["modelcard-deepseek-vector@1x.svg"]
+    "files": [
+      "modelcard-deepseek-vector@1x.svg"
+    ]
   },
   {
     "id": "I2080:40046;2080:44090",
     "original": "icon/DeepSeek / Vector",
     "english": "modelcard-deepseek-vector-inner",
-    "files": ["modelcard-deepseek-vector-inner@1x.svg"]
+    "files": [
+      "modelcard-deepseek-vector-inner@1x.svg"
+    ]
   },
   {
     "id": "2080:40077",
     "original": "蒙版",
     "english": "modelcard-loading-progress",
-    "files": ["modelcard-loading-progress@1x.svg"]
+    "files": [
+      "modelcard-loading-progress@1x.svg"
+    ]
   },
   {
     "id": "2080:3949",
     "original": "Icon (Stroke) / 前进箭头",
     "english": "topbar-nav-arrow",
-    "files": ["topbar-nav-arrow@1x.svg"],
+    "files": [
+      "topbar-nav-arrow@1x.svg"
+    ],
     "note": "Used for both back (rotate 180deg) and forward nav buttons in TopTabBar"
   },
   {
     "id": "1020:11765",
     "original": "icon/首页",
     "english": "topbar-home",
-    "files": ["topbar-home@1x.svg"],
+    "files": [
+      "topbar-home@1x.svg"
+    ],
     "note": "Frame-preserving normalization: 18x18 canvas with Union (1020:11766, 12.16x14.33) translated to inset position (left=2.92 top=1.84) matching Figma frame inset ~16.22% h / ~10.2% v. Uses currentColor fill."
   },
   {
     "id": "6198:451788",
     "original": "icon/设置（大）",
     "english": "topbar-settings",
-    "files": ["topbar-settings@1x.svg"],
+    "files": [
+      "topbar-settings@1x.svg"
+    ],
     "note": "Manually composed from two child paths: gear outline (6198:451788;1165:58472) + center circle (6198:451788;1165:58473). Uses currentColor stroke."
   },
   {
     "id": "I2080:8062;1122:12338;1494:53862",
     "original": "Apps logo",
     "english": "topbar-apps-logo",
-    "files": ["topbar-apps-logo@1x.png"],
+    "files": [
+      "topbar-apps-logo@1x.png"
+    ],
     "note": "PNG 36x36, rendered at 18x18 in TopTabBar third tab slot"
   },
   {
     "id": "2080:3962",
     "original": "icon_btn/新版本 / Frame",
     "english": "topbar-version-icon",
-    "files": ["topbar-version-icon@1x.svg"],
+    "files": [
+      "topbar-version-icon@1x.svg"
+    ],
     "note": "16x16 frame icon inside 新版本 pill; rendered rotate(180deg) in component"
   },
   {
     "id": "2080:3975",
     "original": "gift-box 1",
     "english": "topbar-gift-icon",
-    "files": ["topbar-gift-icon@1x.svg"],
+    "files": [
+      "topbar-gift-icon@1x.svg"
+    ],
     "note": "Manually composed from 4 gradient layers (nodes 2080:3978/3980/3982/3984) into 11.667x10.5 canvas. All layers use white gradient fills for rendering on gradient pill background."
   },
   {
     "id": "2080:4007",
     "original": "icon_user",
     "english": "topbar-user-icon",
-    "files": ["topbar-user-icon@1x.svg"],
+    "files": [
+      "topbar-user-icon@1x.svg"
+    ],
     "note": "20x20 user avatar icon inside user chip"
   },
   {
     "id": "1020:12026",
     "original": "icon/展开（小）/ 多边形",
     "english": "topbar-expand-icon",
-    "files": ["topbar-expand-icon@1x.svg"],
+    "files": [
+      "topbar-expand-icon@1x.svg"
+    ],
     "note": "6x3.5 chevron polygon inside user chip expand indicator"
   },
   {
     "id": "2080:4030",
     "original": "icon_btn/未置顶 / Frame",
     "english": "topbar-pin-icon",
-    "files": ["topbar-pin-icon@1x.svg"],
+    "files": [
+      "topbar-pin-icon@1x.svg"
+    ],
     "note": "16x16 pin icon in window control area"
   },
   {
     "id": "2080:4034",
     "original": "icon_btn/最小化 / Union",
     "english": "topbar-minimize-icon",
-    "files": ["topbar-minimize-icon@1x.svg"],
+    "files": [
+      "topbar-minimize-icon@1x.svg"
+    ],
     "note": "14x1.4 minimize line in window control area"
   },
   {
     "id": "I2080:8062;1122:12560;1122:61677",
     "original": "icon_btn/最大化 / Group",
     "english": "topbar-maximize-icon",
-    "files": ["topbar-maximize-icon@1x.svg"],
+    "files": [
+      "topbar-maximize-icon@1x.svg"
+    ],
     "note": "12x12 maximize icon in window control area"
   },
   {
     "id": "2080:3943",
     "original": "icon_btn/关闭/默认 / Vector (Stroke)",
     "english": "topbar-close-icon",
-    "files": ["topbar-close-icon@1x.svg"],
+    "files": [
+      "topbar-close-icon@1x.svg"
+    ],
     "note": "10.4x10.4 close X icon in window control area"
   },
   {
     "id": "I2080:40409;2080:45260",
     "original": "升级弹窗 / logo Group",
     "english": "upgrade-logo",
-    "files": ["upgrade-logo@1x.svg"],
+    "files": [
+      "upgrade-logo@1x.svg"
+    ],
     "note": "App logo used in 升级中 (96x96 slot) and 升级前 (40x40 slot). viewBox 34.76x34.99, rendered at slot size."
   },
   {
     "id": "2080:40429",
     "original": "升级失败 / 椭圆形",
     "english": "upgrade-fail-circle",
-    "files": ["upgrade-fail-circle@1x.svg"],
+    "files": [
+      "upgrade-fail-circle@1x.svg"
+    ],
     "note": "60x60 circle background for 升级失败 warning icon"
   },
   {
     "id": "2080:40433",
     "original": "升级失败 / Vector (警示三角)",
     "english": "upgrade-fail-triangle",
-    "files": ["upgrade-fail-triangle@1x.svg"],
+    "files": [
+      "upgrade-fail-triangle@1x.svg"
+    ],
     "note": "Warning triangle inside 升级失败 icon, 49x42 viewBox, rendered in 53x53 slot"
   },
   {
     "id": "2080:40434",
     "original": "升级失败 / 感叹号",
     "english": "upgrade-fail-exclaim",
-    "files": ["upgrade-fail-exclaim@1x.svg"],
+    "files": [
+      "upgrade-fail-exclaim@1x.svg"
+    ],
     "note": "Exclamation mark inside warning triangle, 7.47x21.11 viewBox"
   },
   {
     "id": "2080:40368",
     "original": "升级前 / 版本号 logo (mask group)",
     "english": "upgrade-version-logo",
-    "files": ["upgrade-version-logo@1x.svg"],
+    "files": [
+      "upgrade-version-logo@1x.svg"
+    ],
     "note": "Product name logo in 升级前 version row, 137.9x14 viewBox"
   },
   {
     "id": "2080:40365",
     "original": "升级前 / 版本号 logo mask",
     "english": "upgrade-version-logo-mask",
-    "files": ["upgrade-version-logo-mask@1x.svg"],
+    "files": [
+      "upgrade-version-logo-mask@1x.svg"
+    ],
     "note": "Mask layer for version logo. Figma uses mask-alpha effect. Deferred: current implementation renders upgrade-version-logo directly without mask."
+  },
+  {
+    "id": "I1708:30231;490:39783",
+    "original": "Airbnb / APP",
+    "english": "bookmark-airbnb-app",
+    "files": [
+      "bookmark-airbnb-app@1x.png"
+    ],
+    "note": "16x16 app favicon for Airbnb bookmark item (1708:30231). bg #ff0057, rounded-8. 180x120 source PNG."
+  },
+  {
+    "id": "I1708:30232;490:39783",
+    "original": "Disney+ / APP",
+    "english": "bookmark-disney-app",
+    "files": [
+      "bookmark-disney-app@1x.png"
+    ],
+    "note": "16x16 app favicon for Disney+ bookmark item (1708:30232). bg #06062a, rounded-60. 180x120 source PNG."
   }
 ]
