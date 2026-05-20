@@ -5,7 +5,7 @@ import RefreshSvg from '../assets/figma/toolbar-refresh@1x.svg?react'
 import ProxySvg from '../assets/figma/toolbar-proxy@1x.svg?react'
 import MoreSvg from '../assets/figma/toolbar-more@1x.svg?react'
 import ExpandSvg from '../assets/figma/toolbar-expand@1x.svg?react'
-import bookmarkIcon from '../assets/figma/toolbar-bookmark-icon@1x.svg'
+import { BookmarkItem } from './BookmarkItem'
 
 function NavDivider() {
   return (
@@ -27,7 +27,6 @@ interface ToolbarProps {
   canGoBack?: boolean
   canGoForward?: boolean
   urlText?: string
-  bookmarked?: boolean
   urlFocused?: boolean
   assistantButton?: ReactNode | null
   onBack?: () => void
@@ -42,7 +41,6 @@ export function Toolbar({
   canGoBack = true,
   canGoForward = false,
   urlText = '我一直都在',
-  bookmarked = false,
   urlFocused = false,
   assistantButton,
   onBack,
@@ -109,21 +107,7 @@ export function Toolbar({
       {/* RightActions */}
       <div className="flex gap-[12px] items-center">
         <RightDivider />
-        <button
-          onClick={onBookmark}
-          className={`flex gap-[4px] h-[24px] items-center px-[4px] ${
-            bookmarked ? 'bg-[rgba(255,202,40,0.12)] rounded-[6px]' : ''
-          }`}
-          aria-label="收藏"
-        >
-          <img src={bookmarkIcon} alt="" className="size-[16px]" />
-          <span
-            className="text-[12px] leading-normal text-[var(--color-text-secondary)] whitespace-nowrap"
-            style={{ fontFamily: "'SF Pro', sans-serif" }}
-          >
-            Collection
-          </span>
-        </button>
+        <BookmarkItem label="Collection" onClick={onBookmark} />
         <button
           onClick={onMore}
           className="bg-[rgba(255,255,255,0.12)] border-[0.5px] border-[rgba(0,0,0,0.08)] flex items-center justify-center rounded-[99px] size-[24px]"

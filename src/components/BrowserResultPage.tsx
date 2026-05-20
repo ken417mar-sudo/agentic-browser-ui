@@ -79,7 +79,6 @@ export function BrowserResultPage({
         <div className={assistantSidebarOpen ? 'w-[1192px]' : 'w-full'}>
           <Toolbar
             urlText="medium.com"
-            bookmarked
             assistantButton={
               assistantSidebarOpen ? null : (
                 <AssistantSidebarChip onClick={() => setAssistantSidebarOpen(true)} />
