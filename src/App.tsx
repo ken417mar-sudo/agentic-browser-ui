@@ -344,19 +344,12 @@ export default function App() {
         BookmarkItem — bookmark bar chip (source: 1708:30231~30233, 24px height)
       </p>
       <div className="flex items-center gap-[8px] bg-[var(--color-surface-window)] rounded-[8px] px-[8px] py-[4px]">
+        {/* Collection: generic star icon — verified 83.71×24 */}
         <BookmarkItem label="Collection" />
-        <BookmarkItem
-          label="Airbnb"
-          appIconSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/512px-Airbnb_Logo_B%C3%A9lo.svg.png"
-          appIconBg="#ff0057"
-          appIconRadius="8px"
-        />
-        <BookmarkItem
-          label="Disney +"
-          appIconSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Disney%2B_logo.svg/512px-Disney%2B_logo.svg.png"
-          appIconBg="#06062a"
-          appIconRadius="60px"
-        />
+        {/* Airbnb/Disney+: app favicon slots — props structurally correct;
+            real favicon assets not exported yet (Figma 1708:30231/30232 hidden) */}
+        <BookmarkItem label="Airbnb" appIconBg="#ff0057" appIconRadius="8px" />
+        <BookmarkItem label="Disney +" appIconBg="#06062a" appIconRadius="60px" />
       </div>
 
       {/* TopTabBar verify card */}
