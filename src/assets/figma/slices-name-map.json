@@ -349,18 +349,14 @@
     "id": "I1708:30231;490:39783",
     "original": "Airbnb / APP",
     "english": "bookmark-airbnb-app",
-    "files": [
-      "bookmark-airbnb-app@1x.png"
-    ],
+    "files": ["bookmark-airbnb-app@1x.png"],
     "note": "16x16 app favicon for Airbnb bookmark item (1708:30231). bg #ff0057, rounded-8. 180x120 source PNG."
   },
   {
     "id": "I1708:30232;490:39783",
     "original": "Disney+ / APP",
     "english": "bookmark-disney-app",
-    "files": [
-      "bookmark-disney-app@1x.png"
-    ],
+    "files": ["bookmark-disney-app@1x.png"],
     "note": "16x16 app favicon for Disney+ bookmark item (1708:30232). bg #06062a, rounded-60. 180x120 source PNG."
   }
 ]
