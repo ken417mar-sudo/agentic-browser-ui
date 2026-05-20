@@ -14,6 +14,7 @@ import { SearchBar } from './components/SearchBar'
 import { ModelCard } from './components/ModelCard'
 import TopTabBar from './components/TopTabBar'
 import UpgradeDialog from './components/UpgradeDialog'
+import { BookmarkItem } from './components/BookmarkItem'
 import dialogImagePlaceholder from './assets/figma/dialog-image-placeholder@1x.png'
 import './index.css'
 
@@ -116,7 +117,7 @@ export default function App() {
         <div>
           <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">bookmarked=true</p>
           <div className="bg-[var(--color-surface-window)] rounded-[12px] overflow-hidden">
-            <Toolbar bookmarked={true} urlText="https://github.com" />
+            <Toolbar urlText="https://github.com" />
           </div>
         </div>
         <div>
@@ -336,6 +337,26 @@ export default function App() {
           <p className="text-[10px] text-[var(--color-text-tertiary)] mb-2">升级失败 (320×222)</p>
           <UpgradeDialog state="升级失败" />
         </div>
+      </div>
+
+      {/* BookmarkItem verify card */}
+      <p className="text-[var(--color-text-tertiary)] text-[12px] mt-10 mb-4">
+        BookmarkItem — bookmark bar chip (source: 1708:30231~30233, 24px height)
+      </p>
+      <div className="flex items-center gap-[8px] bg-[var(--color-surface-window)] rounded-[8px] px-[8px] py-[4px]">
+        <BookmarkItem label="Collection" />
+        <BookmarkItem
+          label="Airbnb"
+          appIconSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/512px-Airbnb_Logo_B%C3%A9lo.svg.png"
+          appIconBg="#ff0057"
+          appIconRadius="8px"
+        />
+        <BookmarkItem
+          label="Disney +"
+          appIconSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Disney%2B_logo.svg/512px-Disney%2B_logo.svg.png"
+          appIconBg="#06062a"
+          appIconRadius="60px"
+        />
       </div>
 
       {/* TopTabBar verify card */}
