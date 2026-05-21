@@ -359,4 +359,26 @@
     "files": ["bookmark-disney-app@1x.png"],
     "note": "16x16 app favicon for Disney+ bookmark item (1708:30232). bg #06062a, rounded-60. 180x120 source PNG."
   }
+  ,
+  {
+    "id": "1708:30229",
+    "original": "书签 / 分割线",
+    "english": "bookmark-bar-divider",
+    "files": ["bookmark-bar-divider@1x.svg"],
+    "note": "2x24 vertical divider at left edge of bookmark bar section. Stroke #CCCCCC, 8-16 segment."
+  },
+  {
+    "id": "I1708:30242;368:41942",
+    "original": "icon/more / dot",
+    "english": "bookmark-bar-more-dot",
+    "files": ["bookmark-bar-more-dot@1x.svg"],
+    "note": "2x2 dot used in More button (three instances). Fill #666666. Also exported as composite: bookmark-bar-more-icon@1x.png."
+  },
+  {
+    "id": "1708:30242",
+    "original": "icon/more",
+    "english": "bookmark-bar-more-icon",
+    "files": ["bookmark-bar-more-icon@1x.png"],
+    "note": "16x16 three-dot More icon composite (3x 2x2 dots at x=4/10.5/17, y=11). Used inside More button 1708:30241."
+  }
 ]

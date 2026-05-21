@@ -15,6 +15,7 @@ import { ModelCard } from './components/ModelCard'
 import TopTabBar from './components/TopTabBar'
 import UpgradeDialog from './components/UpgradeDialog'
 import { BookmarkItem } from './components/BookmarkItem'
+import { BookmarkBar } from './components/BookmarkBar'
 import bookmarkAirbnbApp from './assets/figma/bookmark-airbnb-app@1x.png'
 import bookmarkDisneyApp from './assets/figma/bookmark-disney-app@1x.png'
 import dialogImagePlaceholder from './assets/figma/dialog-image-placeholder@1x.png'
@@ -352,6 +353,26 @@ export default function App() {
         <BookmarkItem label="Airbnb" appIconSrc={bookmarkAirbnbApp} appIconBg="#ff0057" appIconRadius="8px" />
         {/* Disney+: app favicon — source 1708:30232, bg #06062a, rounded-60 */}
         <BookmarkItem label="Disney +" appIconSrc={bookmarkDisneyApp} appIconBg="#06062a" appIconRadius="60px" />
+      </div>
+
+      {/* BookmarkBar verify card */}
+      <p className="text-[var(--color-text-tertiary)] text-[12px] mt-10 mb-4">
+        BookmarkBar — full bar (source: 1708:30228, 135×24)
+      </p>
+      <div className="bg-[var(--color-surface-window)] rounded-[8px] px-[8px] py-[4px]">
+        <BookmarkBar />
+      </div>
+      <p className="text-[var(--color-text-tertiary)] text-[10px] mt-2 mb-4">
+        with app favicon items
+      </p>
+      <div className="bg-[var(--color-surface-window)] rounded-[8px] px-[8px] py-[4px]">
+        <BookmarkBar
+          items={[
+            { label: 'Collection' },
+            { label: 'Airbnb', appIconSrc: bookmarkAirbnbApp, appIconBg: '#ff0057', appIconRadius: '8px' },
+            { label: 'Disney +', appIconSrc: bookmarkDisneyApp, appIconBg: '#06062a', appIconRadius: '60px' },
+          ]}
+        />
       </div>
 
       {/* TopTabBar verify card */}
