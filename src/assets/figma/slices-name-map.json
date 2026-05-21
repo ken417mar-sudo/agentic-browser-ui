@@ -307,7 +307,7 @@
     "files": [
       "upgrade-fail-circle@1x.svg"
     ],
-    "note": "60x60 circle background for 升级失败 warning icon"
+    "note": "Legacy export from ellipse node 2080:40429. Source fill is visible=false, so this asset must not render in 升级失败 warning icon."
   },
   {
     "id": "2080:40433",

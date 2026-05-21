@@ -1,5 +1,4 @@
 import LogoSvg from '../assets/figma/upgrade-logo@1x.svg?react'
-import FailCircleSvg from '../assets/figma/upgrade-fail-circle@1x.svg?react'
 import FailTriangleSvg from '../assets/figma/upgrade-fail-triangle@1x.svg?react'
 import FailExclaimSvg from '../assets/figma/upgrade-fail-exclaim@1x.svg?react'
 import VersionLogoSvg from '../assets/figma/upgrade-version-logo@1x.svg?react'
@@ -226,20 +225,12 @@ export default function UpgradeDialog({
           <div className="flex flex-col gap-[12px] flex-1 items-center justify-center w-full min-h-0">
             {/* warning icon composite: 60×60 outer */}
             <div className="relative shrink-0" style={{ width: 60, height: 60 }}>
-              <FailCircleSvg className="absolute inset-0 w-full h-full" />
-              {/* 53×53 warning slot at left:3 top:4 */}
-              <div className="absolute" style={{ left: 3, top: 4, width: 53, height: 53 }}>
-                <div className="relative w-full h-full">
-                  {/* triangle with Figma inset: 9.43% 3.77% 11.32% 3.77% */}
-                  <div className="absolute" style={{ inset: '9.43% 3.77% 11.32% 3.77%' }}>
-                    <FailTriangleSvg className="w-full h-full" />
-                  </div>
-                  <FailExclaimSvg
-                    className="absolute"
-                    style={{ left: '41.26%', top: '33.94%', width: '15.1%', height: '39.82%' }}
-                  />
-                </div>
-              </div>
+              {/* 2080:40429 ellipse fill is visible=false, so no circle background renders. */}
+              <FailTriangleSvg className="absolute" style={{ left: 5, top: 9, width: 49, height: 42 }} />
+              <FailExclaimSvg
+                className="absolute"
+                style={{ left: 26.66, top: 21.99, width: 7.47, height: 21.11 }}
+              />
             </div>
             <p
               className="text-[16px] leading-[24px] text-[#18181b] text-center"
