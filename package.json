@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "gate:empty-svgs": "node scripts/check-empty-svgs.mjs",
+    "gate:external-urls": "node scripts/check-external-urls.mjs",
+    "gate": "node scripts/check-empty-svgs.mjs && node scripts/check-external-urls.mjs"
   },
   "dependencies": {
     "react": "^19.2.4",
