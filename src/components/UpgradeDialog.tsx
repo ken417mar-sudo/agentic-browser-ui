@@ -253,15 +253,15 @@ export default function UpgradeDialog({
             <button
               type="button"
               onClick={onRetry}
-            className="flex w-full h-[32px] items-center justify-center rounded-[8px] bg-black shrink-0"
-          >
-            <span
-              className="text-[13px] leading-[20px] text-white"
-              style={{ fontFamily: "'HYQiHei:60S', 'PingFang SC', sans-serif" }}
+              className="flex w-full h-[32px] items-center justify-center rounded-[8px] bg-black shrink-0"
             >
-              重试
-            </span>
-          </button>
+              <span
+                className="text-[13px] leading-[20px] text-white"
+                style={{ fontFamily: "'HYQiHei:60S', 'PingFang SC', sans-serif" }}
+              >
+                重试
+              </span>
+            </button>
           </div>
         </>
       )}
